@@ -1,5 +1,8 @@
 # Pole Vault Meet Manager
 
+Public case study:
+`https://portfolio.meetregistrationpv.com/projects/meet-manager`
+
 ## Public summary
 
 A production web and mobile platform for meet registration, athlete check-in,

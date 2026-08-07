@@ -12,6 +12,7 @@ results, and screenshot decisions separate from the page components.
 
 ## Publishing notes
 
+- [Portfolio domain hosting](portfolio-hosting.md)
 - [Self-hosted production platform](infrastructure.md)
 - [Screenshot inventory and capture plan](screenshots.md)
 - [Public-content guidelines](public-content-guidelines.md)

@@ -3,11 +3,14 @@ import { ProjectCard } from "../components/ProjectCard";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 import { projects } from "../lib/projects";
+import { PORTFOLIO_HOME_URL } from "../lib/site-urls";
 
 export const metadata: Metadata = {
   title: "Steven Pierce | Junior Software Engineer",
   description:
     "Production software projects by Steven Pierce across web, mobile, cloud, and computer vision.",
+  alternates: { canonical: PORTFOLIO_HOME_URL },
+  openGraph: { url: PORTFOLIO_HOME_URL },
 };
 
 export default function Home() {

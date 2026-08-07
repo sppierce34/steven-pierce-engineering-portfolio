@@ -1,5 +1,8 @@
 # Landon Pole Rental
 
+Public case study:
+`https://portfolio.pole-rental.com/projects/pole-rental`
+
 ## Public summary
 
 A cross-platform rental application for equipment inventory, checkout,

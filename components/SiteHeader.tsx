@@ -1,18 +1,18 @@
-import Link from "next/link";
+import { PORTFOLIO_HOME_URL } from "../lib/site-urls";
 
 export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="shell header-inner">
-        <Link className="brand" href="/" aria-label="Steven Pierce home">
+        <a className="brand" href={PORTFOLIO_HOME_URL} aria-label="Steven Pierce home">
           <span className="brand-mark">SP</span>
           <span className="brand-copy">
             <strong>Steven Pierce</strong>
             <small>Software engineer</small>
           </span>
-        </Link>
+        </a>
         <nav aria-label="Primary navigation">
-          <Link href="/#projects">Projects</Link>
+          <a href={`${PORTFOLIO_HOME_URL}/#projects`}>Projects</a>
           <a href="mailto:sppierce34@yahoo.com">Contact</a>
           <a
             className="nav-pill"

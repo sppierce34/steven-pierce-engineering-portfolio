@@ -1,13 +1,13 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-async function render(pathname = "/") {
+async function render(pathname = "/", hostname = "portfolio.meetregistrationpv.com") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${pathname}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
-    new Request(`http://localhost${pathname}`, {
+    new Request(`https://${hostname}${pathname}`, {
       headers: { accept: "text/html" },
     }),
     {
@@ -37,7 +37,35 @@ test("server-renders the engineering portfolio", async () => {
   assert.match(html, /I built the servers, too/);
   assert.match(html, /Cloudflare Tunnel \+ Load Balancing/);
   assert.match(html, /Linux server 01/);
+  assert.match(
+    html,
+    /https:\/\/portfolio\.meetregistrationpv\.com\/projects\/meet-manager/,
+  );
+  assert.match(
+    html,
+    /https:\/\/portfolio\.landoncheckin\.com\/projects\/video-capture/,
+  );
+  assert.match(
+    html,
+    /https:\/\/portfolio\.pole-rental\.com\/projects\/pole-rental/,
+  );
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
+});
+
+test("routes each product portfolio host to its intended root page", async () => {
+  const meetResponse = await render("/", "portfolio.meetregistrationpv.com");
+  const meetHtml = await meetResponse.text();
+  assert.match(meetHtml, /Projects that ship/);
+
+  const videoResponse = await render("/", "portfolio.landoncheckin.com");
+  const videoHtml = await videoResponse.text();
+  assert.match(videoHtml, /PV Video Capture \| Steven Pierce/);
+  assert.match(videoHtml, /Two trained models/);
+
+  const rentalResponse = await render("/", "portfolio.pole-rental.com");
+  const rentalHtml = await rentalResponse.text();
+  assert.match(rentalHtml, /Landon Pole Rental \| Steven Pierce/);
+  assert.match(rentalHtml, /Cross-platform commerce/);
 });
 
 test("server-renders a project case study", async () => {

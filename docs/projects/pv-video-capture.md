@@ -1,5 +1,8 @@
 # PV Video Capture
 
+Public case study:
+`https://portfolio.landoncheckin.com/projects/video-capture`
+
 ## Public summary
 
 A multi-camera capture, computer-vision, athlete check-in, labeling, and clip

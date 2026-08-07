@@ -14,6 +14,7 @@ export type Project = {
   secondaryImageAlt?: string;
   liveUrl: string;
   liveLabel: string;
+  portfolioUrl: string;
   stack: string[];
   highlights: string[];
   modelTraining?: {
@@ -44,6 +45,7 @@ export const projects: Project[] = [
     imageAlt: "Authenticated Pole Vault Meet Manager dashboard showing event operations and athlete counts",
     liveUrl: "https://meetregistrationpv.com",
     liveLabel: "Open live application",
+    portfolioUrl: "https://portfolio.meetregistrationpv.com/projects/meet-manager",
     stack: [
       "Python",
       "Flask",
@@ -98,6 +100,7 @@ export const projects: Project[] = [
     secondaryImageAlt: "Wide-angle source frame from the pole vault video capture system",
     liveUrl: "https://landoncheckin.com",
     liveLabel: "Open live check-in",
+    portfolioUrl: "https://portfolio.landoncheckin.com/projects/video-capture",
     stack: [
       "Python",
       "OpenCV",
@@ -172,6 +175,7 @@ export const projects: Project[] = [
     imageAlt: "Landon Pole Rental production sign-in screen",
     liveUrl: "https://pole-rental.com",
     liveLabel: "Open live application",
+    portfolioUrl: "https://portfolio.pole-rental.com/projects/pole-rental",
     stack: [
       "TypeScript",
       "Expo Router",

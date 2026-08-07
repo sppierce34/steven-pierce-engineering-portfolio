@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "../../../components/SiteFooter";
 import { SiteHeader } from "../../../components/SiteHeader";
 import { getProject, projects } from "../../../lib/projects";
+import { PORTFOLIO_HOME_URL } from "../../../lib/site-urls";
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -20,6 +20,8 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   return {
     title: `${project.title} | Steven Pierce`,
     description: project.summary,
+    alternates: { canonical: project.portfolioUrl },
+    openGraph: { url: project.portfolioUrl },
   };
 }
 
@@ -37,7 +39,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <main className="case-study">
         <section className="case-hero shell">
           <div className="breadcrumb">
-            <Link href="/">Work</Link>
+            <a href={PORTFOLIO_HOME_URL}>Work</a>
             <span aria-hidden="true">/</span>
             <span>{project.number}</span>
           </div>
@@ -200,13 +202,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         )}
 
         <section className="next-project">
-          <Link className="shell next-project-inner" href={`/projects/${nextProject.slug}`}>
+          <a className="shell next-project-inner" href={nextProject.portfolioUrl}>
             <div>
               <span>Next project</span>
               <strong>{nextProject.title}</strong>
             </div>
             <span className="next-arrow" aria-hidden="true">→</span>
-          </Link>
+          </a>
         </section>
       </main>
       <SiteFooter />
