@@ -22,7 +22,7 @@ backend, native clients, release process, and production operations.
 
 ## Screenshot targets
 
-- Organizer dashboard with a live or safely staged meet
+- Organizer dashboard with a live or safely staged meet — captured August 2026
 - Athlete registration or check-in workflow
 - Scoring interface and public results
 

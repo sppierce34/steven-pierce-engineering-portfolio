@@ -40,8 +40,8 @@ export const projects: Project[] = [
     status: "Live production system",
     platforms: "Web, iOS, Android",
     role: "Product owner and full-stack engineer",
-    image: "/projects/meet-manager.png",
-    imageAlt: "Pole Vault Meet Manager production login screen",
+    image: "/projects/meet-manager-dashboard.png",
+    imageAlt: "Authenticated Pole Vault Meet Manager dashboard showing event operations and athlete counts",
     liveUrl: "https://meetregistrationpv.com",
     liveLabel: "Open live application",
     stack: [

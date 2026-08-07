@@ -56,3 +56,13 @@ test("server-renders a project case study", async () => {
   assert.match(html, /Open live check-in/);
   assert.match(html, /Private repository/);
 });
+
+test("server-renders the authenticated Meet Manager showcase", async () => {
+  const response = await render("/projects/meet-manager");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /meet-manager-dashboard\.png/);
+  assert.match(html, /Authenticated Pole Vault Meet Manager dashboard/);
+  assert.doesNotMatch(html, /Meet Manager production login screen/);
+});
