@@ -4,6 +4,16 @@ This folder is the durable source of truth for Steven Pierce's public software
 engineering portfolio. It keeps product facts, architecture summaries, model
 results, and screenshot decisions separate from the page components.
 
+## Agent continuity
+
+- [Current agent handoff](agent-handoff.md) records what is live, how the
+  portfolio is routed, and any remaining work.
+- [Change log](change-log.md) records material implementation, content,
+  deployment, and operations work in reverse chronological order.
+
+Agents must update these files when the current state changes. The repository
+root `AGENTS.md` defines the required start-of-task and end-of-task workflow.
+
 ## Project case studies
 
 - [Pole Vault Meet Manager](projects/meet-manager.md)

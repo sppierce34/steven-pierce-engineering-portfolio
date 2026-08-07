@@ -4,6 +4,21 @@ The portfolio is published from one Sites project and exposed through three
 product-owned portfolio subdomains. This keeps the portfolio close to the live
 products without replacing or intercepting their customer-facing routes.
 
+## Current status
+
+Verified on 2026-08-06:
+
+- All three custom domains are active with valid HTTPS certificates.
+- The three root URLs and three direct case-study URLs return HTTP 200 and the
+  expected project content.
+- Each Cloudflare zone has a DNS-only `portfolio` CNAME plus the two validation
+  records supplied by Sites.
+- The original Sites URL remains available as a fallback:
+  `https://steven-pierce-engineering.sppierce34.chatgpt.site`.
+
+Validation values are intentionally not copied into this repository. Retrieve
+the current records from Sites and manage them through the domain provider.
+
 ## Public entry points
 
 - Main portfolio: `https://portfolio.meetregistrationpv.com`
