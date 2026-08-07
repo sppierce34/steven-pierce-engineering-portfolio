@@ -98,6 +98,37 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </section>
 
+        {project.modelTraining && (
+          <section className="model-training-section">
+            <div className="shell model-training-layout">
+              <div className="model-training-copy">
+                <p className="eyebrow">Model training</p>
+                <h2>{project.modelTraining.title}</h2>
+                <p>{project.modelTraining.description}</p>
+                <p className="model-evidence">{project.modelTraining.evidence}</p>
+              </div>
+              <div>
+                <div className="model-stat-grid" aria-label="Computer vision model results">
+                  {project.modelTraining.stats.map((stat) => (
+                    <div className="model-stat" key={stat.label}>
+                      <strong>{stat.value}</strong>
+                      <span>{stat.label}</span>
+                    </div>
+                  ))}
+                </div>
+                <ol className="model-pipeline">
+                  {project.modelTraining.pipeline.map((step, index) => (
+                    <li key={step}>
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                      <p>{step}</p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </section>
+        )}
+
         <section className="architecture-section">
           <div className="shell">
             <div className="section-intro architecture-intro">

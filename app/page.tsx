@@ -88,12 +88,12 @@ export default function Home() {
               <span>Production case studies</span>
             </div>
             <div>
-              <strong>Web + native</strong>
-              <span>Shared cross-platform systems</span>
+              <strong>30K+ frames</strong>
+              <span>Computer-vision data pipeline</span>
             </div>
             <div>
-              <strong>AI-assisted</strong>
-              <span>Specification through verification</span>
+              <strong>2 servers</strong>
+              <span>Self-hosted production failover</span>
             </div>
             <div>
               <strong>End to end</strong>
@@ -117,6 +117,59 @@ export default function Home() {
             {projects.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
+          </div>
+        </section>
+
+        <section className="infrastructure-section">
+          <div className="shell infrastructure-layout">
+            <div className="infrastructure-copy">
+              <p className="eyebrow">Production ownership</p>
+              <h2>I built the servers, too.</h2>
+              <p>
+                I provision and operate a two-server Linux platform for these
+                public applications. The work includes secure remote access,
+                system services, deployments, Cloudflare tunnels and load
+                balancing, health monitoring, backups, maintenance, and tested
+                failover—not only application code.
+              </p>
+              <ul className="infrastructure-practices">
+                <li>Systemd services and timers for apps, deploys, monitoring, and maintenance</li>
+                <li>Encrypted USB and NAS backups, retention checks, and restore drills</li>
+                <li>External uptime checks, synthetic user flows, incident evidence, and UPS-aware shutdown</li>
+              </ul>
+            </div>
+            <div className="infrastructure-map" aria-label="Self-hosted production platform">
+              <div className="public-apps">
+                <span>Meet Manager</span>
+                <span>Landon Check-In</span>
+                <span>Pole Rental</span>
+              </div>
+              <div className="infra-connector" aria-hidden="true">↓</div>
+              <div className="edge-card">
+                <span>Public edge</span>
+                <strong>Cloudflare Tunnel + Load Balancing</strong>
+                <p>Host routing, aggregate health, session affinity, and automatic origin failover</p>
+              </div>
+              <div className="infra-connector" aria-hidden="true">↓</div>
+              <div className="server-grid">
+                <article>
+                  <span>PRIMARY</span>
+                  <strong>Linux server 01</strong>
+                  <p>Production apps, health services, backups, and guarded maintenance</p>
+                </article>
+                <article>
+                  <span>FAILOVER</span>
+                  <strong>Linux server 02</strong>
+                  <p>Mirrored services, independent tunnel origin, and recovery capacity</p>
+                </article>
+              </div>
+              <div className="ops-rail">
+                <span>MONITOR</span>
+                <span>BACK UP</span>
+                <span>FAIL OVER</span>
+                <span>RECOVER</span>
+              </div>
+            </div>
           </div>
         </section>
 

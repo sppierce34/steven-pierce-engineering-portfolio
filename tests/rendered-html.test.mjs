@@ -34,6 +34,9 @@ test("server-renders the engineering portfolio", async () => {
   assert.match(html, /Pole Vault Meet Manager/);
   assert.match(html, /PV Video Capture/);
   assert.match(html, /Landon Pole Rental/);
+  assert.match(html, /I built the servers, too/);
+  assert.match(html, /Cloudflare Tunnel \+ Load Balancing/);
+  assert.match(html, /Linux server 01/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
 });
 
@@ -45,6 +48,11 @@ test("server-renders a project case study", async () => {
   assert.match(html, /PV Video Capture \| Steven Pierce/);
   assert.match(html, /From user action to production service/);
   assert.match(html, /Cloudflare Stream/);
+  assert.match(html, /Two trained models/);
+  assert.match(html, /30,605/);
+  assert.match(html, /15,579/);
+  assert.match(html, /scene-segmentation mask mAP50/);
+  assert.match(html, /Publish a candidate only when it beats the current same-split baseline/);
   assert.match(html, /Open live check-in/);
   assert.match(html, /Private repository/);
 });
