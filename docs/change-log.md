@@ -38,13 +38,18 @@ Validation:
 
 Publishing:
 
-- The profile README repository is public. The audited portfolio release is
-  ready to push, publish with Sites, and change from private to public.
+- The profile README repository and portfolio source repository are public.
+- The profile README is enabled on Steven's public GitHub profile.
+- Release commit `e398aa7` was pushed to GitHub and published as Sites version
+  6.
+- GitHub Actions passed for the release commit.
+- All six custom-domain portfolio routes and the Sites fallback URL returned
+  HTTP 200 after publishing.
 
 Follow-up:
 
-- Record the final Git commit, Sites version, GitHub visibility, and public URL
-  verification after publishing.
+- None. Dependabot opened routine dependency-update pull requests for later
+  review; they are not part of this release.
 
 ## 2026-08-06 - Activate custom domains and require agent handoffs
 

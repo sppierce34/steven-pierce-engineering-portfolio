@@ -23,15 +23,18 @@ All six URLs returned HTTP 200 with the intended content during the latest
 verification. The fallback Sites URL is
 `https://steven-pierce-engineering.sppierce34.chatgpt.site`.
 
-The latest published source at the time of this handoff is commit `725ea1d`.
+The latest published source at the time of this handoff is commit `e398aa7`
+(Sites version 6).
 The Sites project identifier remains in `.openai/hosting.json`; reuse it rather
 than creating another site.
 
-## GitHub public-release readiness
+## GitHub public release
 
 - Portfolio source: `https://github.com/sppierce34/steven-pierce-engineering-portfolio`
 - Profile: `https://github.com/sppierce34`
 - Profile README source: `https://github.com/sppierce34/sppierce34`
+- Both repositories are public, and the profile README is enabled on Steven's
+  public profile.
 - The GitHub profile includes a recruiter-focused bio, location, portfolio URL,
   and available-for-hire status.
 - The repository includes recruiter-facing project evidence, a security policy,
@@ -43,6 +46,9 @@ than creating another site.
   regression test.
 - `npm audit` reports zero known vulnerabilities for the release dependency
   graph.
+- GitHub Actions passed on the release commit. All six custom-domain portfolio
+  routes and the Sites fallback URL returned HTTP 200 after version 6 was
+  published.
 
 ## Routing implementation
 
