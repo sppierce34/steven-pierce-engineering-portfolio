@@ -13,6 +13,13 @@ organizer administration, scoring, and live public results.
 Product owner and full-stack engineer across the web application, shared
 backend, native clients, release process, and production operations.
 
+## Production evidence
+
+As of August 2026, the platform has processed 509 successful registrations
+across 10 meets. Production operations include external health checks,
+synthetic user-flow monitoring, controlled two-origin failover drills, sample
+backup restores, and documented recovery procedures.
+
 ## Architecture
 
 1. Athletes and staff use web, iPhone, iPad, and Android clients.

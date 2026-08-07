@@ -1,14 +1,18 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-async function render(pathname = "/", hostname = "portfolio.meetregistrationpv.com") {
+async function render(
+  pathname = "/",
+  hostname = "portfolio.meetregistrationpv.com",
+  headers = {},
+) {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${pathname}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
     new Request(`https://${hostname}${pathname}`, {
-      headers: { accept: "text/html" },
+      headers: { accept: "text/html", ...headers },
     }),
     {
       ASSETS: {
@@ -66,6 +70,29 @@ test("routes each product portfolio host to its intended root page", async () =>
   const rentalHtml = await rentalResponse.text();
   assert.match(rentalHtml, /Landon Pole Rental \| Steven Pierce/);
   assert.match(rentalHtml, /Cross-platform commerce/);
+});
+
+test("does not trust forwarded host values for metadata or root routing", async () => {
+  const attackerResponse = await render(
+    "/",
+    "portfolio.meetregistrationpv.com",
+    { "x-forwarded-host": "attacker.example" },
+  );
+  const attackerHtml = await attackerResponse.text();
+  assert.doesNotMatch(attackerHtml, /attacker\.example/i);
+  assert.match(
+    attackerHtml,
+    /https:\/\/portfolio\.meetregistrationpv\.com\/og\.png/,
+  );
+
+  const crossHostResponse = await render(
+    "/",
+    "portfolio.meetregistrationpv.com",
+    { "x-forwarded-host": "portfolio.landoncheckin.com" },
+  );
+  const crossHostHtml = await crossHostResponse.text();
+  assert.match(crossHostHtml, /Projects that ship/);
+  assert.doesNotMatch(crossHostHtml, /PV Video Capture \| Steven Pierce/);
 });
 
 test("server-renders a project case study", async () => {

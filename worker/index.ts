@@ -37,9 +37,8 @@ const worker = {
       }, allowedWidths);
     }
 
-    const forwardedHost = request.headers.get("x-forwarded-host")?.split(",", 1)[0]?.trim();
-    const hostname = (forwardedHost || url.hostname).split(":", 1)[0];
-    const rootProjectPath = url.pathname === "/" ? rootProjectPathForHost(hostname) : undefined;
+    const rootProjectPath =
+      url.pathname === "/" ? rootProjectPathForHost(url.hostname) : undefined;
 
     if (rootProjectPath) {
       url.pathname = rootProjectPath;

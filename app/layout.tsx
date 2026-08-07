@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { headers } from "next/headers";
+import { portfolioOriginForHost } from "../lib/site-urls";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,9 +16,7 @@ const geistMono = Geist_Mono({
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
-  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
-  const protocol = host.includes("localhost") ? "http" : "https";
-  const base = new URL(`${protocol}://${host}`);
+  const base = new URL(portfolioOriginForHost(requestHeaders.get("host")));
 
   return {
     metadataBase: base,

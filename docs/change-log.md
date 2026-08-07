@@ -5,6 +5,47 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-08-06 - Prepare the GitHub portfolio for public release
+
+Scope:
+
+- Reworked the repository README around recruiter-facing projects, dates,
+  evidence, direct case-study links, and live applications.
+- Created the public `sppierce34/sppierce34` profile README and populated the
+  GitHub profile name, bio, location, portfolio URL, and available-for-hire
+  status.
+- Added a security policy, GitHub Actions CI, Dependabot updates, and a durable
+  public-release checklist.
+- Removed unused database template code and upgraded the active build and
+  runtime dependencies.
+
+Security review:
+
+- Scanned every tracked file and every reachable Git revision for secrets,
+  sensitive infrastructure details, private source, and unsafe binary assets.
+- Found no credentials, tokens, private addresses, private repository links, or
+  sensitive records.
+- Fixed the one low-severity finding by preventing forwarded host values from
+  influencing metadata and product-host root routing.
+
+Validation:
+
+- The production build and all five rendered-HTML tests passed, including the
+  hostile-forwarded-host regression test.
+- Lint completed with zero errors and three existing image-optimization
+  warnings.
+- `npm audit --audit-level=low` reported zero vulnerabilities.
+
+Publishing:
+
+- The profile README repository is public. The audited portfolio release is
+  ready to push, publish with Sites, and change from private to public.
+
+Follow-up:
+
+- Record the final Git commit, Sites version, GitHub visibility, and public URL
+  verification after publishing.
+
 ## 2026-08-06 - Activate custom domains and require agent handoffs
 
 Scope:

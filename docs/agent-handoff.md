@@ -27,6 +27,23 @@ The latest published source at the time of this handoff is commit `725ea1d`.
 The Sites project identifier remains in `.openai/hosting.json`; reuse it rather
 than creating another site.
 
+## GitHub public-release readiness
+
+- Portfolio source: `https://github.com/sppierce34/steven-pierce-engineering-portfolio`
+- Profile: `https://github.com/sppierce34`
+- Profile README source: `https://github.com/sppierce34/sppierce34`
+- The GitHub profile includes a recruiter-focused bio, location, portfolio URL,
+  and available-for-hire status.
+- The repository includes recruiter-facing project evidence, a security policy,
+  automated CI, and Dependabot configuration.
+- A full tracked-file and Git-history security scan found no credentials,
+  secrets, private infrastructure addresses, or private source. The only code
+  finding was low severity: forwarded host values could influence metadata and
+  root routing. The release fixes it with an explicit host allowlist and a
+  regression test.
+- `npm audit` reports zero known vulnerabilities for the release dependency
+  graph.
+
 ## Routing implementation
 
 - `lib/site-urls.ts` is the source of truth for the main portfolio URL and
