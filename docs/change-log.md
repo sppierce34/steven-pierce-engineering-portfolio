@@ -41,7 +41,10 @@ Validation:
 
 Publishing:
 
-- Pending commit, Sites publication, and byte verification.
+- Release commit `a063040` was pushed to GitHub and the configured Sites source
+  repository, then published as Sites version 9.
+- The custom-domain and Sites fallback PDF URLs both returned HTTP 200 with
+  `application/pdf`; both downloads byte-matched the approved repository PDF.
 
 Follow-up:
 

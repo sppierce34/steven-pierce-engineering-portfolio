@@ -23,8 +23,8 @@ All six URLs returned HTTP 200 with the intended content during the latest
 verification. The fallback Sites URL is
 `https://steven-pierce-engineering.sppierce34.chatgpt.site`.
 
-The latest published source at the time of this handoff is commit `1cf4adc`
-(Sites version 8).
+The latest published source at the time of this handoff is commit `a063040`
+(Sites version 9).
 The Sites project identifier remains in `.openai/hosting.json`; reuse it rather
 than creating another site.
 
@@ -129,8 +129,7 @@ For content or application changes:
 
 ## Open work
 
-There is no remaining custom-domain activation or resume content work after
-the rebuilt PDF is published and byte-verified.
+There is no remaining custom-domain activation or resume content work.
 
 - Resolve the current `image-size` and `nanoid` audit advisories in a dedicated
   dependency update. Re-run the full test, lint, audit, and deployment workflow
