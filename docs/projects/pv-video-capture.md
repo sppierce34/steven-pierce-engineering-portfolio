@@ -50,6 +50,22 @@ surpassed the original 25,000-frame milestone.
 5. Publish a new vault-phase checkpoint only when it improves same-split
    mAP50-95 over the current production baseline.
 
+## Athlete video access
+
+Staff can enable athlete clip access without exposing the full staff library.
+Enabled athletes can securely browse, stream, and download clips assigned to
+their account plus clips from practice dates they attended. Playback uses
+short-lived signed Cloudflare Stream sessions, and the production API enforces
+the account and attendance rules before returning watch or stream URLs.
+
+## Stripe integration
+
+The private-lesson booking workflow in the same athlete check-in platform uses
+Stripe Connect and hosted Checkout for coach onboarding, direct connected-
+account charges, application fees, payouts, webhook reconciliation, and
+refunds. This payment workflow supports lesson booking; athlete video access is
+not presented as a paid clip feature.
+
 ## Architecture
 
 1. PTZ and fixed cameras capture live attempts.
@@ -58,7 +74,7 @@ surpassed the original 25,000-frame milestone.
 3. FastAPI coordinates accounts, check-in, rosters, clips, and labeling APIs
    across self-hosted primary and failover Linux servers.
 4. Neon/Postgres, Cloudflare Stream, and R2 store shared data, video, and
-   training assets.
+   training assets; signed playback sessions protect athlete viewing.
 5. Browser, mobile, check-in-station, and labeling interfaces support athletes
    and staff.
 

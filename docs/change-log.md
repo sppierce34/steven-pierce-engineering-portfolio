@@ -5,6 +5,49 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-08-17 - Rebalance resume and document payment integrations
+
+Scope:
+
+- Rebuilt the one-page resume with larger type and more even vertical spacing
+  so the content extends naturally through the bottom of the page.
+- Added verified Stripe responsibilities to PV Video Capture, Pole Vault Meet
+  Manager, and Landon Pole Rental.
+- Added a prominent PV Video Capture accomplishment describing secure online
+  athlete streaming and downloads through signed Cloudflare Stream playback.
+- Updated the three durable project notes with the exact public-safe payment
+  and athlete-video boundaries verified from the private source projects.
+
+Result:
+
+- The resume remains one page while using substantially more of the available
+  page area; the last text baseline ends about 53 points from the physical
+  page bottom, including the 0.35-inch margin.
+- Stripe claims now identify registration payments, private-lesson payments,
+  and organization-specific rental billing as distinct implementations.
+- Video access is described as an account- and attendance-controlled athlete
+  feature, not as a paid clip product.
+
+Validation:
+
+- Confirmed the PDF is exactly one US Letter page with all seven contact and
+  project hyperlinks active.
+- Extracted text contains the three Stripe project descriptions and the online
+  stream/download accomplishment, and still contains no location.
+- Rendered at 144 DPI and as a complete-page overview; visual review found no
+  clipping, overlap, cramped wrapping, or excess bottom gap.
+- `npm test` completed successfully: the production build and all seven
+  rendered-HTML and recruiter-demo isolation tests passed.
+
+Publishing:
+
+- Pending commit, Sites publication, and byte verification.
+
+Follow-up:
+
+- None expected for the resume. The separately documented dependency-audit
+  upgrade remains open.
+
 ## 2026-08-17 - Add isolated recruiter demos
 
 Scope:

@@ -83,10 +83,18 @@ than creating another site.
 
 - `public/Steven-Pierce-Resume.pdf` is the current one-page public resume served
   by the portfolio.
-- The contact header no longer lists a location; the phone, email, GitHub, and
+- The layout was rebuilt on 2026-08-17 with larger body text and distributed
+  vertical spacing so the content fills the page through the bottom margin
+  without clipping or overflowing.
+- The contact header does not list a location; the phone, email, GitHub, and
   portfolio links are centered beneath the title.
-- The PDF was verified as one US Letter page, visually reviewed from a 144 DPI
-  render, and checked to confirm that all seven hyperlinks remain active.
+- Each project now describes its verified Stripe integration. PV Video Capture
+  additionally highlights secure online athlete streaming and downloads
+  through signed Cloudflare Stream playback.
+- The PDF was verified as exactly one US Letter page, visually reviewed from
+  both a 144 DPI render and a complete-page overview, and checked to confirm
+  that all seven hyperlinks remain active. The last text baseline ends about
+  53 points from the physical page bottom, including the 0.35-inch margin.
 - The deployed PDF at
   `https://portfolio.meetregistrationpv.com/Steven-Pierce-Resume.pdf` was
   downloaded after publishing and byte-matched to the repository asset.
@@ -121,7 +129,8 @@ For content or application changes:
 
 ## Open work
 
-There is no remaining custom-domain activation or resume work.
+There is no remaining custom-domain activation or resume content work after
+the rebuilt PDF is published and byte-verified.
 
 - Resolve the current `image-size` and `nanoid` audit advisories in a dedicated
   dependency update. Re-run the full test, lint, audit, and deployment workflow

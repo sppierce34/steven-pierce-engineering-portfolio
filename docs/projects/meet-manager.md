@@ -27,13 +27,21 @@ across 10 meets. Production operations include external health checks,
 synthetic user-flow monitoring, controlled two-origin failover drills, sample
 backup restores, and documented recovery procedures.
 
+## Stripe integration
+
+Registration and camp payment workflows use organization-owned Stripe Connect
+accounts and hosted Checkout. The platform supports saved-payment setup,
+disclosed payment schedules, scheduled charges, webhook reconciliation,
+organizer payment-status tracking, and refunds without storing card data.
+
 ## Architecture
 
 1. Athletes and staff use web, iPhone, iPad, and Android clients.
 2. Cloudflare routes production traffic through independent server tunnel
    origins and removes an unhealthy origin from rotation.
 3. Flask serves public pages, APIs, and organizer workflows.
-4. Convex supplies shared authoritative data and scoring behavior.
+4. Convex supplies shared authoritative data, scoring behavior, payment
+   schedules, and idempotent payment state.
 5. Two self-hosted Linux servers, system services, monitoring, backups,
    guarded maintenance, and app-store delivery support meet day.
 
