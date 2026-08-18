@@ -3,6 +3,13 @@
 Public case study:
 `https://portfolio.meetregistrationpv.com/projects/meet-manager`
 
+Read-only recruiter demo:
+`https://portfolio.meetregistrationpv.com/demos/meet-manager`
+
+The demo uses fictional meet, roster, and scoring records stored only in the
+portfolio. It does not authenticate with or submit data to the production meet
+platform.
+
 ## Public summary
 
 A production web and mobile platform for meet registration, athlete check-in,

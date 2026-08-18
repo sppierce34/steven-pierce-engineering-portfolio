@@ -15,6 +15,7 @@ export type Project = {
   liveUrl: string;
   liveLabel: string;
   portfolioUrl: string;
+  demoUrl: string;
   stack: string[];
   highlights: string[];
   modelTraining?: {
@@ -46,6 +47,7 @@ export const projects: Project[] = [
     liveUrl: "https://meetregistrationpv.com",
     liveLabel: "Open live application",
     portfolioUrl: "https://portfolio.meetregistrationpv.com/projects/meet-manager",
+    demoUrl: "https://portfolio.meetregistrationpv.com/demos/meet-manager",
     stack: [
       "Python",
       "Flask",
@@ -101,6 +103,7 @@ export const projects: Project[] = [
     liveUrl: "https://landoncheckin.com",
     liveLabel: "Open live check-in",
     portfolioUrl: "https://portfolio.landoncheckin.com/projects/video-capture",
+    demoUrl: "https://portfolio.landoncheckin.com/demos/video-capture",
     stack: [
       "Python",
       "OpenCV",
@@ -176,6 +179,7 @@ export const projects: Project[] = [
     liveUrl: "https://pole-rental.com",
     liveLabel: "Open live application",
     portfolioUrl: "https://portfolio.pole-rental.com/projects/pole-rental",
+    demoUrl: "https://portfolio.pole-rental.com/demos/pole-rental",
     stack: [
       "TypeScript",
       "Expo Router",

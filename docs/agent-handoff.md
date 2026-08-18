@@ -28,6 +28,20 @@ The latest published source at the time of this handoff is commit `5fcbb22`
 The Sites project identifier remains in `.openai/hosting.json`; reuse it rather
 than creating another site.
 
+## Recruiter demo state
+
+- Three pre-authenticated, read-only portfolio demos are implemented for Meet
+  Manager, PV Video Capture, and Landon Pole Rental.
+- Their public routes are documented in `docs/recruiter-demos.md`; publishing
+  and live-route verification are pending the release commit.
+- Demo data is fictional and defined in `lib/demo-scenarios.ts`.
+- `components/ProjectDemo.tsx` has no network, browser-storage, form,
+  authentication, or persistence integration. The production application
+  repositories, accounts, services, and deployments are unchanged.
+- Main-page project images, titles, and the prominent `View project page`
+  actions link directly to each product-owned case-study route. Separate demo
+  and live-product links remain explicit.
+
 ## GitHub public release
 
 - Portfolio source: `https://github.com/sppierce34/steven-pierce-engineering-portfolio`
@@ -87,6 +101,7 @@ than creating another site.
 - Registration, meet, uptime, failover, and recovery claims:
   `docs/projects/meet-manager.md` and `docs/infrastructure.md`
 - Screenshot approvals: `docs/screenshots.md`
+- Recruiter-demo routes and isolation boundary: `docs/recruiter-demos.md`
 - Public/privacy boundaries: `docs/public-content-guidelines.md`
 
 Do not change a metric or architecture claim using memory alone. Verify it

@@ -5,6 +5,45 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-08-17 - Add isolated recruiter demos
+
+Scope:
+
+- Added pre-authenticated, read-only demo routes for Meet Manager, PV Video
+  Capture, and Landon Pole Rental.
+- Added prominent direct project-page links plus separate demo and live-product
+  links to every main-page project card.
+- Added an `Open read-only demo` action and explicit sample-data fact to every
+  case study.
+
+Result:
+
+- Recruiters can switch among representative project workflows using fictional
+  sample records without registering or receiving production credentials.
+- Demo UI contains no network, form-submission, browser-storage,
+  authentication, payment, media, camera, or persistence integration.
+- No production application repository, account, service, database, or
+  deployment was changed.
+
+Validation:
+
+- `npm test` completed successfully: the production build and all seven
+  rendered-HTML and isolation tests passed.
+- All three demo routes rendered with product-specific metadata, account state,
+  sample-only labeling, and direct return links to their case studies.
+- Lint completed with zero errors and the three existing image-optimization
+  warnings.
+
+Publishing:
+
+- Repository publishing and the Sites deployment are pending the release
+  commit.
+
+Follow-up:
+
+- Publish the validated source, verify all three product-domain demo routes and
+  their project-page links, then record the release outcome.
+
 ## 2026-08-17 - Refine the one-page resume header
 
 Scope:

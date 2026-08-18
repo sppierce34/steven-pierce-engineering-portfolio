@@ -6,7 +6,7 @@ The portfolio should demonstrate product workflows, not only authentication.
 | --- | --- | --- | --- |
 | Meet Manager | Authenticated event-operations dashboard | Optional scoring or results workflow | Captured August 2026 |
 | PV Video Capture | Authenticated model-labeling workspace and runway source frame | Optional athlete clip library | Captured August 2026 |
-| Landon Pole Rental | Production login | Inventory, rental status, or staff workflow | Working account required; demo login currently fails |
+| Landon Pole Rental | Production login | Inventory, rental status, or staff workflow | Isolated recruiter demo now covers the feature workflow; authenticated production screenshot remains optional |
 
 ## Capture rules
 

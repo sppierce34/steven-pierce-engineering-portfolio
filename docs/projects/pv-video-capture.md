@@ -3,6 +3,13 @@
 Public case study:
 `https://portfolio.landoncheckin.com/projects/video-capture`
 
+Read-only recruiter demo:
+`https://portfolio.landoncheckin.com/demos/video-capture`
+
+The demo presents fictional capture, clip, and model-review records. It does
+not connect to cameras, athlete accounts, private media, hosted services, or
+the production capture environment.
+
 ## Public summary
 
 A multi-camera capture, computer-vision, athlete check-in, labeling, and clip

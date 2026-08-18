@@ -24,6 +24,7 @@ root `AGENTS.md` defines the required start-of-task and end-of-task workflow.
 
 - [Portfolio domain hosting](portfolio-hosting.md)
 - [Self-hosted production platform](infrastructure.md)
+- [Isolated recruiter demos](recruiter-demos.md)
 - [Screenshot inventory and capture plan](screenshots.md)
 - [Public-content guidelines](public-content-guidelines.md)
 

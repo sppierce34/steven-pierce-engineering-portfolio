@@ -17,11 +17,24 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return {};
+  const title = `${project.title} | Steven Pierce`;
+  const image = new URL(project.image, project.portfolioUrl).toString();
   return {
-    title: `${project.title} | Steven Pierce`,
+    title,
     description: project.summary,
     alternates: { canonical: project.portfolioUrl },
-    openGraph: { url: project.portfolioUrl },
+    openGraph: {
+      title,
+      description: project.summary,
+      url: project.portfolioUrl,
+      images: [{ url: image, alt: project.imageAlt }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: project.summary,
+      images: [image],
+    },
   };
 }
 
@@ -49,11 +62,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <h1>{project.title}</h1>
               <p className="case-summary">{project.summary}</p>
               <div className="case-actions">
-                <a className="button button-primary" href={project.liveUrl} target="_blank" rel="noreferrer">
+                <a className="button button-primary" href={project.demoUrl}>
+                  Open read-only demo <span aria-hidden="true">→</span>
+                </a>
+                <a className="button button-secondary" href={project.liveUrl} target="_blank" rel="noreferrer">
                   {project.liveLabel} <span aria-hidden="true">↗</span>
                 </a>
-                <a className="button button-secondary" href="mailto:sppierce34@yahoo.com">
-                  Discuss this project
+                <a className="button button-quiet" href="mailto:sppierce34@yahoo.com">
+                  Discuss the project
                 </a>
               </div>
             </div>
@@ -73,6 +89,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <div>
                 <span>Source</span>
                 <strong>Private repository</strong>
+              </div>
+              <div>
+                <span>Demo</span>
+                <strong>Isolated sample data</strong>
               </div>
             </div>
           </div>

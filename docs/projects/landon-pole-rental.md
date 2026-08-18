@@ -3,6 +3,13 @@
 Public case study:
 `https://portfolio.pole-rental.com/projects/pole-rental`
 
+Read-only recruiter demo:
+`https://portfolio.pole-rental.com/demos/pole-rental`
+
+The demo uses fictional inventory and rental records stored only in the
+portfolio. It has no authentication, payment, agreement, messaging, D1, R2, or
+production application connection.
+
 ## Public summary
 
 A cross-platform rental application for equipment inventory, checkout,

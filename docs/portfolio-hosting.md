@@ -28,6 +28,12 @@ the current records from Sites and manage them through the domain provider.
   `https://portfolio.landoncheckin.com/projects/video-capture`
 - Landon Pole Rental case study:
   `https://portfolio.pole-rental.com/projects/pole-rental`
+- Meet Manager recruiter demo:
+  `https://portfolio.meetregistrationpv.com/demos/meet-manager`
+- PV Video Capture recruiter demo:
+  `https://portfolio.landoncheckin.com/demos/video-capture`
+- Landon Pole Rental recruiter demo:
+  `https://portfolio.pole-rental.com/demos/pole-rental`
 
 The root request on `portfolio.landoncheckin.com` renders the PV Video Capture
 case study. The root request on `portfolio.pole-rental.com` renders the Landon
@@ -45,3 +51,7 @@ The existing application hosts remain unchanged:
 Only the dedicated `portfolio.` subdomains point to the Sites deployment. No
 application credentials, private data, or internal infrastructure addresses
 belong in the portfolio hosting configuration.
+
+Recruiter demos are portfolio-only routes backed by static fictional records.
+They do not share authentication, storage, APIs, or runtime bindings with the
+customer-facing applications.

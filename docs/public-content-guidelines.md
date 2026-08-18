@@ -14,6 +14,10 @@ Aggregate dataset counts and validation metrics are appropriate when they have
 been checked against project documentation. Mark estimates as estimates and
 date model results when they may change.
 
+Recruiter demos must use clearly labeled fictional sample data and remain
+isolated from production authentication, APIs, storage, payments, media, and
+customer records. Do not publish shared production credentials as a demo path.
+
 ## Before making the repository public
 
 1. Scan the current tracked files and every reachable Git revision for secrets,
