@@ -23,8 +23,8 @@ All six URLs returned HTTP 200 with the intended content during the latest
 verification. The fallback Sites URL is
 `https://steven-pierce-engineering.sppierce34.chatgpt.site`.
 
-The latest published source at the time of this handoff is commit `e398aa7`
-(Sites version 6).
+The latest published source at the time of this handoff is commit `5fcbb22`
+(Sites version 7).
 The Sites project identifier remains in `.openai/hosting.json`; reuse it rather
 than creating another site.
 
@@ -69,6 +69,9 @@ than creating another site.
   portfolio links are centered beneath the title.
 - The PDF was verified as one US Letter page, visually reviewed from a 144 DPI
   render, and checked to confirm that all seven hyperlinks remain active.
+- The deployed PDF at
+  `https://portfolio.meetregistrationpv.com/Steven-Pierce-Resume.pdf` was
+  downloaded after publishing and byte-matched to the repository asset.
 - Its portfolio and project hyperlinks use the product-owned custom domains.
 - The editable DOCX is not stored in this public repository. When the resume is
   changed, export and visually verify a new PDF, replace the public PDF, update

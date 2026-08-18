@@ -29,13 +29,14 @@ Validation:
 
 Publishing:
 
-- Repository publishing and the Sites deployment are pending the release
-  commit.
+- Release commit `5fcbb22` was pushed to GitHub and published as Sites version
+  7.
+- The custom-domain and Sites fallback PDF URLs both returned HTTP 200 after
+  publishing; the custom-domain download byte-matched the repository PDF.
 
 Follow-up:
 
-- Publish the validated resume through the existing Sites project, verify the
-  public PDF URL, and record the deployed version here and in the handoff.
+- None.
 
 ## 2026-08-06 - Prepare the GitHub portfolio for public release
 
