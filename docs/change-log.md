@@ -5,6 +5,38 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-08-17 - Refine the one-page resume header
+
+Scope:
+
+- Removed `Ortonville, MI` from the public resume.
+- Re-centered the phone, email, GitHub, and portfolio links without changing
+  the resume's software-engineering content or project metrics.
+
+Result:
+
+- `public/Steven-Pierce-Resume.pdf` remains a single-page US Letter resume.
+- The visible contact line and its clickable link regions remain aligned.
+
+Validation:
+
+- Confirmed the PDF has exactly one page and that extracted text no longer
+  contains the removed location.
+- Rendered the revised page at 144 DPI and visually reviewed the complete page.
+- Confirmed all seven contact and project hyperlinks remain present.
+- `npm test` completed successfully: the production build and all five
+  rendered-HTML tests passed.
+
+Publishing:
+
+- Repository publishing and the Sites deployment are pending the release
+  commit.
+
+Follow-up:
+
+- Publish the validated resume through the existing Sites project, verify the
+  public PDF URL, and record the deployed version here and in the handoff.
+
 ## 2026-08-06 - Prepare the GitHub portfolio for public release
 
 Scope:

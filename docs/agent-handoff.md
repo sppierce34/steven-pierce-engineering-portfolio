@@ -1,6 +1,6 @@
 # Current agent handoff
 
-Last verified: 2026-08-06
+Last verified: 2026-08-17
 
 This file is the shortest path to the repository's current operational state.
 Update it whenever live URLs, published content, hosting, validation status, or
@@ -65,6 +65,10 @@ than creating another site.
 
 - `public/Steven-Pierce-Resume.pdf` is the current one-page public resume served
   by the portfolio.
+- The contact header no longer lists a location; the phone, email, GitHub, and
+  portfolio links are centered beneath the title.
+- The PDF was verified as one US Letter page, visually reviewed from a 144 DPI
+  render, and checked to confirm that all seven hyperlinks remain active.
 - Its portfolio and project hyperlinks use the product-owned custom domains.
 - The editable DOCX is not stored in this public repository. When the resume is
   changed, export and visually verify a new PDF, replace the public PDF, update
