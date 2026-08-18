@@ -23,8 +23,8 @@ All six URLs returned HTTP 200 with the intended content during the latest
 verification. The fallback Sites URL is
 `https://steven-pierce-engineering.sppierce34.chatgpt.site`.
 
-The latest published source at the time of this handoff is commit `5fcbb22`
-(Sites version 7).
+The latest published source at the time of this handoff is commit `1cf4adc`
+(Sites version 8).
 The Sites project identifier remains in `.openai/hosting.json`; reuse it rather
 than creating another site.
 
@@ -32,15 +32,16 @@ than creating another site.
 
 - Three pre-authenticated, read-only portfolio demos are implemented for Meet
   Manager, PV Video Capture, and Landon Pole Rental.
-- Their public routes are documented in `docs/recruiter-demos.md`; publishing
-  and live-route verification are pending the release commit.
+- Their public routes are documented in `docs/recruiter-demos.md`; all three
+  returned HTTP 200 with the expected isolated-demo content after publishing.
 - Demo data is fictional and defined in `lib/demo-scenarios.ts`.
 - `components/ProjectDemo.tsx` has no network, browser-storage, form,
   authentication, or persistence integration. The production application
   repositories, accounts, services, and deployments are unchanged.
 - Main-page project images, titles, and the prominent `View project page`
   actions link directly to each product-owned case-study route. Separate demo
-  and live-product links remain explicit.
+  and live-product links remain explicit. The live main page was verified to
+  contain all three project-page URLs and all three demo URLs.
 
 ## GitHub public release
 

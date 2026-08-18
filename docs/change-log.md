@@ -36,13 +36,17 @@ Validation:
 
 Publishing:
 
-- Repository publishing and the Sites deployment are pending the release
-  commit.
+- Release commit `1cf4adc` was pushed to GitHub and published as Sites version
+  8.
+- The main portfolio, all three case studies, and all three product-domain demo
+  routes returned HTTP 200 with their expected content after publishing.
+- The live main page contained all three direct project-page links and all
+  three demo links.
 
 Follow-up:
 
-- Publish the validated source, verify all three product-domain demo routes and
-  their project-page links, then record the release outcome.
+- None for the recruiter demos. The separately documented dependency-audit
+  upgrade remains open.
 
 ## 2026-08-17 - Refine the one-page resume header
 
