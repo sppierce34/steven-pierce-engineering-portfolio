@@ -44,11 +44,14 @@ than creating another site.
   finding was low severity: forwarded host values could influence metadata and
   root routing. The release fixes it with an explicit host allowlist and a
   regression test.
-- `npm audit` reports zero known vulnerabilities for the release dependency
-  graph.
-- GitHub Actions passed on the release commit. All six custom-domain portfolio
-  routes and the Sites fallback URL returned HTTP 200 after version 6 was
-  published.
+- The 2026-08-17 GitHub Actions run passed build, rendered-page tests, and lint,
+  but its dependency-audit step reported three newly known high-severity
+  advisories in transitive `image-size` and `nanoid` packages. The available
+  complete audit fix currently requires a `vinext` beta upgrade and should be
+  handled as a separately validated dependency task.
+- All six custom-domain portfolio routes and the Sites fallback URL returned
+  HTTP 200 after version 6 was published; the updated resume was separately
+  verified after version 7 was published.
 
 ## Routing implementation
 
@@ -102,5 +105,8 @@ For content or application changes:
 
 ## Open work
 
-There is no remaining custom-domain activation work. Future agents should add
-new follow-ups here with a concrete status and remove them when verified.
+There is no remaining custom-domain activation or resume work.
+
+- Resolve the current `image-size` and `nanoid` audit advisories in a dedicated
+  dependency update. Re-run the full test, lint, audit, and deployment workflow
+  because the complete fix currently moves `vinext` beyond the pinned beta.

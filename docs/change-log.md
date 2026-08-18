@@ -26,6 +26,9 @@ Validation:
 - Confirmed all seven contact and project hyperlinks remain present.
 - `npm test` completed successfully: the production build and all five
   rendered-HTML tests passed.
+- Post-push GitHub Actions also passed build, rendered-page tests, and lint, but
+  the dependency-audit step reported three high-severity advisories newly
+  associated with transitive `image-size` and `nanoid` packages.
 
 Publishing:
 
@@ -36,7 +39,10 @@ Publishing:
 
 Follow-up:
 
-- None.
+- Address the dependency advisories in a separate upgrade task. The complete
+  audit fix currently requires moving `vinext` beyond its pinned beta, so it
+  needs full regression testing and a new deployment rather than being folded
+  into this resume-only release.
 
 ## 2026-08-06 - Prepare the GitHub portfolio for public release
 
