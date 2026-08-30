@@ -13,6 +13,8 @@ Scope:
   `portfolio.meetregistrationpv.com`.
 - Added a permanent host-level redirect from the original Sites hostname to
   the product-owned portfolio domain, preserving paths and query strings.
+- Enabled Worker-first static asset routing so direct PDF requests cannot
+  bypass the hostname redirect.
 
 Result:
 
@@ -25,6 +27,8 @@ Validation:
 
 - The production build and rendered-page tests passed, including regression
   coverage for the canonical resume link and legacy-host redirect.
+- Lint completed without errors; the three existing image-optimization
+  warnings remain unchanged.
 - The custom-domain PDF returned HTTP 200 with `application/pdf`, and the old
   hostname returned a permanent redirect to the same custom-domain path.
 

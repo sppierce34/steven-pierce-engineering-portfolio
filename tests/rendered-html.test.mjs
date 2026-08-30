@@ -89,6 +89,14 @@ test("redirects the Sites fallback hostname to the product-owned domain", async 
   );
 });
 
+test("routes static assets through the Worker before serving them", async () => {
+  const workerConfig = JSON.parse(
+    await readFile(new URL("../dist/server/wrangler.json", import.meta.url), "utf8"),
+  );
+
+  assert.equal(workerConfig.assets.run_worker_first, true);
+});
+
 test("routes each product portfolio host to its intended root page", async () => {
   const meetResponse = await render("/", "portfolio.meetregistrationpv.com");
   const meetHtml = await meetResponse.text();

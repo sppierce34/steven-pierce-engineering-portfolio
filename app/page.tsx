@@ -37,7 +37,7 @@ export default function Home() {
               <a className="button button-primary" href="#projects">
                 Explore projects <span aria-hidden="true">↓</span>
               </a>
-              <a className="button button-secondary" href={RESUME_URL} target="_blank">
+              <a className="button button-secondary" href={RESUME_URL} target="_blank" rel="noreferrer">
                 View résumé <span aria-hidden="true">↗</span>
               </a>
             </div>

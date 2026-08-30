@@ -12,7 +12,7 @@ export function SiteFooter() {
         </div>
         <div className="footer-links">
           <a href={`${PORTFOLIO_HOME_URL}/#projects`}>Projects</a>
-          <a href={RESUME_URL} target="_blank">
+          <a href={RESUME_URL} target="_blank" rel="noreferrer">
             Résumé
           </a>
           <a href="https://github.com/sppierce34" target="_blank" rel="noreferrer">

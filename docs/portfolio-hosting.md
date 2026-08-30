@@ -17,6 +17,8 @@ Verified on 2026-08-30:
   product-owned portfolio domain while preserving the path and query string.
   Recruiter-facing navigation and resume links therefore never retain or show
   the `chatgpt.site` hostname.
+- Static assets run through the Worker first so the same redirect also applies
+  to direct PDF requests rather than only application-rendered pages.
 
 Validation values are intentionally not copied into this repository. Retrieve
 the current records from Sites and manage them through the domain provider.
