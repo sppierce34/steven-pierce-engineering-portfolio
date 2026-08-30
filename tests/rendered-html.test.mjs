@@ -17,7 +17,12 @@ async function render(
     }),
     {
       ASSETS: {
-        fetch: async () => new Response("Not found", { status: 404 }),
+        fetch: async (assetRequest) =>
+          new URL(assetRequest.url).pathname === "/assets/resume-document.pdf"
+            ? new Response("sample-pdf", {
+                headers: { "content-type": "application/pdf" },
+              })
+            : new Response("Not found", { status: 404 }),
       },
     },
     {
@@ -95,6 +100,18 @@ test("routes static assets through the Worker before serving them", async () => 
   );
 
   assert.equal(workerConfig.assets.run_worker_first, true);
+});
+
+test("serves the canonical resume route from its internal PDF asset", async () => {
+  const response = await render("/Steven-Pierce-Resume.pdf");
+
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("content-type"), "application/pdf");
+  assert.equal(
+    response.headers.get("content-disposition"),
+    'inline; filename="Steven-Pierce-Resume.pdf"',
+  );
+  assert.equal(await response.text(), "sample-pdf");
 });
 
 test("routes each product portfolio host to its intended root page", async () => {

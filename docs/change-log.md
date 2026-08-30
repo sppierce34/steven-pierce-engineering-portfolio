@@ -15,6 +15,8 @@ Scope:
   the product-owned portfolio domain, preserving paths and query strings.
 - Enabled Worker-first static asset routing so direct PDF requests cannot
   bypass the hostname redirect.
+- Moved the PDF behind a Worker-served canonical route so Sites' outer exact
+  asset handling cannot retain the legacy hostname.
 
 Result:
 

@@ -1,7 +1,9 @@
 export const PORTFOLIO_HOME_URL = "https://portfolio.meetregistrationpv.com";
 export const PORTFOLIO_FALLBACK_HOSTNAME =
   "steven-pierce-engineering.sppierce34.chatgpt.site";
-export const RESUME_URL = `${PORTFOLIO_HOME_URL}/Steven-Pierce-Resume.pdf`;
+export const RESUME_PATH = "/Steven-Pierce-Resume.pdf";
+export const RESUME_SOURCE_ASSET_PATH = "/assets/resume-document.pdf";
+export const RESUME_URL = `${PORTFOLIO_HOME_URL}${RESUME_PATH}`;
 
 const PORTFOLIO_ORIGINS = {
   "portfolio.meetregistrationpv.com": PORTFOLIO_HOME_URL,

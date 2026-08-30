@@ -78,8 +78,8 @@ the `chatgpt.site` hostname. The Sites project identifier remains in
 
 ## Resume state
 
-- `public/Steven-Pierce-Resume.pdf` is the current one-page public resume served
-  by the portfolio.
+- `public/assets/resume-document.pdf` is the current one-page public resume
+  served at the canonical product-owned URL by the portfolio Worker.
 - The layout was rebuilt on 2026-08-17 with larger body text and distributed
   vertical spacing so the content fills the page through the bottom margin
   without clipping or overflowing.

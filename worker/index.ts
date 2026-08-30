@@ -4,6 +4,8 @@ import handler from "vinext/server/app-router-entry";
 import {
   PORTFOLIO_FALLBACK_HOSTNAME,
   PORTFOLIO_HOME_URL,
+  RESUME_PATH,
+  RESUME_SOURCE_ASSET_PATH,
   rootProjectPathForHost,
 } from "../lib/site-urls";
 
@@ -25,6 +27,19 @@ const worker = {
     if (url.hostname.toLowerCase() === PORTFOLIO_FALLBACK_HOSTNAME) {
       const canonicalUrl = new URL(`${url.pathname}${url.search}`, PORTFOLIO_HOME_URL);
       return Response.redirect(canonicalUrl.toString(), 308);
+    }
+
+    if (url.pathname === RESUME_PATH) {
+      const assetUrl = new URL(RESUME_SOURCE_ASSET_PATH, url);
+      const assetResponse = await env.ASSETS.fetch(new Request(assetUrl, request));
+      const headers = new Headers(assetResponse.headers);
+      headers.set("Content-Type", "application/pdf");
+      headers.set("Content-Disposition", 'inline; filename="Steven-Pierce-Resume.pdf"');
+      return new Response(assetResponse.body, {
+        status: assetResponse.status,
+        statusText: assetResponse.statusText,
+        headers,
+      });
     }
 
     if (url.pathname === "/_vinext/image") {

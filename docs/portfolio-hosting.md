@@ -19,6 +19,9 @@ Verified on 2026-08-30:
   the `chatgpt.site` hostname.
 - Static assets run through the Worker first so the same redirect also applies
   to direct PDF requests rather than only application-rendered pages.
+- The public PDF route is Worker-served from an internal asset filename. This
+  prevents the outer static asset layer from bypassing the legacy-host redirect
+  for `/Steven-Pierce-Resume.pdf`.
 
 Validation values are intentionally not copied into this repository. Retrieve
 the current records from Sites and manage them through the domain provider.
