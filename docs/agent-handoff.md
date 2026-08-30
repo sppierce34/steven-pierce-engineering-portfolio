@@ -1,6 +1,6 @@
 # Current agent handoff
 
-Last verified: 2026-08-17
+Last verified: 2026-08-30
 
 This file is the shortest path to the repository's current operational state.
 Update it whenever live URLs, published content, hosting, validation status, or
@@ -20,13 +20,10 @@ The portfolio is public and the product-owned domains are active:
   `https://portfolio.pole-rental.com/projects/pole-rental`
 
 All six URLs returned HTTP 200 with the intended content during the latest
-verification. The fallback Sites URL is
-`https://steven-pierce-engineering.sppierce34.chatgpt.site`.
-
-The latest published source at the time of this handoff is commit `a063040`
-(Sites version 9).
-The Sites project identifier remains in `.openai/hosting.json`; reuse it rather
-than creating another site.
+verification. The original Sites hostname permanently redirects every path to
+`https://portfolio.meetregistrationpv.com`, so visitors do not remain on or see
+the `chatgpt.site` hostname. The Sites project identifier remains in
+`.openai/hosting.json`; reuse it rather than creating another site.
 
 ## Recruiter demo state
 
@@ -97,7 +94,10 @@ than creating another site.
   53 points from the physical page bottom, including the 0.35-inch margin.
 - The deployed PDF at
   `https://portfolio.meetregistrationpv.com/Steven-Pierce-Resume.pdf` was
-  downloaded after publishing and byte-matched to the repository asset.
+  downloaded after publishing and byte-matched to the repository asset. All
+  visible portfolio resume actions use this absolute product-owned URL.
+- The legacy Sites-host PDF URL redirects permanently to the product-owned PDF
+  URL while preserving query parameters.
 - Its portfolio and project hyperlinks use the product-owned custom domains.
 - The editable DOCX is not stored in this public repository. When the resume is
   changed, export and visually verify a new PDF, replace the public PDF, update
@@ -129,7 +129,7 @@ For content or application changes:
 
 ## Open work
 
-There is no remaining custom-domain activation or resume content work.
+There is no remaining custom-domain activation or resume-hostname work.
 
 - Resolve the current `image-size` and `nanoid` audit advisories in a dedicated
   dependency update. Re-run the full test, lint, audit, and deployment workflow

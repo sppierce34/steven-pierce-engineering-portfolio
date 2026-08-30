@@ -68,7 +68,25 @@ test("server-renders the engineering portfolio", async () => {
     html,
     /https:\/\/portfolio\.pole-rental\.com\/demos\/pole-rental/,
   );
+  assert.match(
+    html,
+    /https:\/\/portfolio\.meetregistrationpv\.com\/Steven-Pierce-Resume\.pdf/,
+  );
+  assert.doesNotMatch(html, /chatgpt\.site/i);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
+});
+
+test("redirects the Sites fallback hostname to the product-owned domain", async () => {
+  const response = await render(
+    "/Steven-Pierce-Resume.pdf?source=legacy",
+    "steven-pierce-engineering.sppierce34.chatgpt.site",
+  );
+
+  assert.equal(response.status, 308);
+  assert.equal(
+    response.headers.get("location"),
+    "https://portfolio.meetregistrationpv.com/Steven-Pierce-Resume.pdf?source=legacy",
+  );
 });
 
 test("routes each product portfolio host to its intended root page", async () => {

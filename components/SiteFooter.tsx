@@ -1,4 +1,4 @@
-import { PORTFOLIO_HOME_URL } from "../lib/site-urls";
+import { PORTFOLIO_HOME_URL, RESUME_URL } from "../lib/site-urls";
 
 export function SiteFooter() {
   return (
@@ -12,7 +12,7 @@ export function SiteFooter() {
         </div>
         <div className="footer-links">
           <a href={`${PORTFOLIO_HOME_URL}/#projects`}>Projects</a>
-          <a href="/Steven-Pierce-Resume.pdf" target="_blank">
+          <a href={RESUME_URL} target="_blank">
             Résumé
           </a>
           <a href="https://github.com/sppierce34" target="_blank" rel="noreferrer">

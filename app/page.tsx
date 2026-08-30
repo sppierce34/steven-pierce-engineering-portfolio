@@ -3,7 +3,7 @@ import { ProjectCard } from "../components/ProjectCard";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 import { projects } from "../lib/projects";
-import { PORTFOLIO_HOME_URL } from "../lib/site-urls";
+import { PORTFOLIO_HOME_URL, RESUME_URL } from "../lib/site-urls";
 
 export const metadata: Metadata = {
   title: "Steven Pierce | Junior Software Engineer",
@@ -37,7 +37,7 @@ export default function Home() {
               <a className="button button-primary" href="#projects">
                 Explore projects <span aria-hidden="true">↓</span>
               </a>
-              <a className="button button-secondary" href="/Steven-Pierce-Resume.pdf" target="_blank">
+              <a className="button button-secondary" href={RESUME_URL} target="_blank">
                 View résumé <span aria-hidden="true">↗</span>
               </a>
             </div>

@@ -6,15 +6,17 @@ products without replacing or intercepting their customer-facing routes.
 
 ## Current status
 
-Verified on 2026-08-06:
+Verified on 2026-08-30:
 
 - All three custom domains are active with valid HTTPS certificates.
 - The three root URLs and three direct case-study URLs return HTTP 200 and the
   expected project content.
 - Each Cloudflare zone has a DNS-only `portfolio` CNAME plus the two validation
   records supplied by Sites.
-- The original Sites URL remains available as a fallback:
-  `https://steven-pierce-engineering.sppierce34.chatgpt.site`.
+- Requests to the original Sites hostname redirect permanently to the main
+  product-owned portfolio domain while preserving the path and query string.
+  Recruiter-facing navigation and resume links therefore never retain or show
+  the `chatgpt.site` hostname.
 
 Validation values are intentionally not copied into this repository. Retrieve
 the current records from Sites and manage them through the domain provider.
@@ -22,6 +24,8 @@ the current records from Sites and manage them through the domain provider.
 ## Public entry points
 
 - Main portfolio: `https://portfolio.meetregistrationpv.com`
+- Resume:
+  `https://portfolio.meetregistrationpv.com/Steven-Pierce-Resume.pdf`
 - Meet Manager case study:
   `https://portfolio.meetregistrationpv.com/projects/meet-manager`
 - PV Video Capture case study:

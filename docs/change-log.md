@@ -5,6 +5,38 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-08-30 - Keep the resume on the product-owned portfolio domain
+
+Scope:
+
+- Replaced relative resume actions with one absolute canonical URL on
+  `portfolio.meetregistrationpv.com`.
+- Added a permanent host-level redirect from the original Sites hostname to
+  the product-owned portfolio domain, preserving paths and query strings.
+
+Result:
+
+- Opening the resume from any portfolio entry point resolves to
+  `https://portfolio.meetregistrationpv.com/Steven-Pierce-Resume.pdf`.
+- Recruiters no longer remain on or see a `chatgpt.site` address when entering
+  through an old bookmark or search result.
+
+Validation:
+
+- The production build and rendered-page tests passed, including regression
+  coverage for the canonical resume link and legacy-host redirect.
+- The custom-domain PDF returned HTTP 200 with `application/pdf`, and the old
+  hostname returned a permanent redirect to the same custom-domain path.
+
+Publishing:
+
+- Published through the existing Sites project and verified on the public
+  product-owned domain.
+
+Follow-up:
+
+- None.
+
 ## 2026-08-17 - Rebalance resume and document payment integrations
 
 Scope:
