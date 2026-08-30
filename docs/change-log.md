@@ -5,6 +5,42 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-08-30 - Replace the PV Video Capture labeling screenshot
+
+Scope:
+
+- Replaced the older labeling-workspace image with Steven's current
+  authenticated PV Local Labeling capture.
+- Cropped only the Chrome tabs, address bar, and bookmarks bar while retaining
+  the complete application width and bottom status bar.
+- Updated the case-study alternative text and durable screenshot record to
+  describe the model-assisted vault-phase review workflow.
+
+Result:
+
+- The PV Video Capture case study now demonstrates a live `run_up` prediction
+  at 94 percent confidence, the detected-athlete box, review controls, queue,
+  playback timeline, and application status in one current production view.
+- The public image contains no browser chrome, account name, contact record,
+  credential, token, or infrastructure address.
+
+Validation:
+
+- Visually reviewed the exact 2,560 x 1,346 application-only crop and confirmed
+  that the left and right application edges, header, and bottom status bar are
+  intact.
+- `npm test` passed the production build and all rendered-page and recruiter-
+  demo isolation tests.
+
+Publishing:
+
+- Published through the existing Sites project and verified on the PV Video
+  Capture product-owned portfolio domain.
+
+Follow-up:
+
+- None.
+
 ## 2026-08-30 - Keep the resume on the product-owned portfolio domain
 
 Scope:

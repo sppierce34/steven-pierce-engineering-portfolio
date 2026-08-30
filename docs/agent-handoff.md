@@ -116,6 +116,17 @@ the `chatgpt.site` hostname. The Sites project identifier remains in
 Do not change a metric or architecture claim using memory alone. Verify it
 against a private source project or a fact supplied directly by Steven.
 
+## PV Video Capture screenshot state
+
+- The case-study hero now uses Steven's August 30 authenticated PV Local
+  Labeling capture instead of the older labeling workspace image.
+- The approved public crop preserves the full application interface, including
+  the phase-model prediction, detected-athlete box, review controls, queue, and
+  status bar, while removing all Chrome tabs, address, and bookmarks UI.
+- The current screenshot decision and exact crop are recorded in
+  `docs/screenshots.md`; the corresponding project context is in
+  `docs/projects/pv-video-capture.md`.
+
 ## Required verification
 
 For content or application changes:

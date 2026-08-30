@@ -84,3 +84,12 @@ not presented as a paid clip feature.
 - Clip library or playback workflow with private details redacted
 - Hosted model-labeling workspace
 - Segmentation overlay or vault-phase prediction example
+
+## Current public screenshot
+
+The case-study hero uses the authenticated PV Local Labeling workspace during
+model-assisted vault-phase review. It shows the active `run_up` prediction,
+the detected-athlete box, phase-review controls, the labeling queue, and the
+complete application status bar. The source capture was cropped to remove only
+the browser tabs, address bar, and bookmarks bar; no browser chrome remains in
+the public asset.

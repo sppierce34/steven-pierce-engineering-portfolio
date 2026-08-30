@@ -97,7 +97,7 @@ export const projects: Project[] = [
     platforms: "Desktop, web, mobile",
     role: "Product owner and software engineer",
     image: "/projects/pv-labeling-workspace.png",
-    imageAlt: "Authenticated PV Labeling workspace showing vault-phase tools, dataset counts, and training video",
+    imageAlt: "Authenticated PV Local Labeling workspace reviewing a 94 percent run-up prediction and detected athlete",
     secondaryImage: "/projects/pv-video-capture.png",
     secondaryImageAlt: "Wide-angle source frame from the pole vault video capture system",
     liveUrl: "https://landoncheckin.com",
