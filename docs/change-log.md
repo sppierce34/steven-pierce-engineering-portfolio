@@ -5,6 +5,51 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-08-30 - Prepare the real Pole Rental recruiter demo and inventory showcase
+
+Scope:
+
+- Replaced the Pole Rental login image with Steven's authenticated inventory
+  capture and removed its Chrome tabs, address bar, and bookmarks.
+- Removed the Pole Rental `Open read-only demo` and `Discuss the project`
+  actions from the case study and removed the old demo link from its main-page
+  card.
+- Pointed the single `Open live application` action at the prepared
+  `/recruiter-demo` entry point in the actual Pole Rental application.
+
+Result:
+
+- The case study now presents a current production inventory workflow rather
+  than a sign-in form.
+- Once deployed, recruiters will enter a fictional 12-pole tenant through the
+  actual application code, browse inventory, add poles to the real cart UI,
+  and complete a simulated checkout without creating a rental, reservation,
+  agreement, account change, or Stripe activity.
+- Pole Rental application PR #4 implements the tenant, automatic login, local
+  checkout simulation, and an independent API write barrier.
+
+Validation:
+
+- Visually reviewed the cropped image and confirmed it contains no browser UI,
+  user identity, contact detail, credential, payment information, or token.
+- Added rendered-page regression coverage for the single CTA, updated image,
+  fictional-tenant fact, and absence of the two removed actions.
+- `npm test` passed the production build and all 11 rendered-page tests.
+- `npm run lint` completed with zero errors and the three existing
+  image-optimization warnings.
+
+Publishing:
+
+- Not published. The portfolio must not expose the new link until Pole Rental
+  PR #4 is merged, migration `0025` is applied, the API and self-hosted web app
+  are deployed, and the public recruiter route passes a smoke test.
+
+Follow-up:
+
+- Complete the application deployment first, then merge this portfolio branch,
+  publish it through the existing Sites project, and verify the affected
+  product-owned URLs.
+
 ## 2026-08-30 - Replace the PV Video Capture labeling screenshot
 
 Scope:

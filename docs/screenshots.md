@@ -6,7 +6,7 @@ The portfolio should demonstrate product workflows, not only authentication.
 | --- | --- | --- | --- |
 | Meet Manager | Authenticated event-operations dashboard | Optional scoring or results workflow | Captured August 2026 |
 | PV Video Capture | Authenticated model-assisted vault-phase review with active run-up prediction | Optional athlete clip library | Replaced August 30, 2026; browser chrome removed |
-| Landon Pole Rental | Production login | Inventory, rental status, or staff workflow | Isolated recruiter demo now covers the feature workflow; authenticated production screenshot remains optional |
+| Landon Pole Rental | Authenticated production inventory browser | Optional rental cart or staff workflow | Replaced August 30, 2026; browser chrome removed |
 
 ## Capture rules
 
@@ -27,3 +27,18 @@ The portfolio should demonstrate product workflows, not only authentication.
 - Review: the final 2,560 x 1,346 image begins at the application header and
   ends at the application status bar. It contains no account name, contact
   record, credential, token, infrastructure address, or browser UI.
+
+## Landon Pole Rental crop record
+
+- Public asset: `public/projects/landon-pole-rental.png`
+- Source: Steven-supplied authenticated Landon Pole Rental inventory capture
+  from August 30, 2026.
+- Crop: Chrome tabs, address bar, and bookmarks were removed while preserving
+  the complete application viewport from the left navigation through the
+  inventory scrollbar.
+- Review: the final 1,623 x 969 image shows the production inventory search,
+  grouping controls, aggregate 591-pole count, and length groups. It contains no user
+  identity, contact detail, credential, payment information, token, or browser
+  UI.
+- Public meaning: this image documents the production interface. The linked
+  recruiter demo uses a separate fictional 12-pole tenant.

@@ -15,8 +15,12 @@ been checked against project documentation. Mark estimates as estimates and
 date model results when they may change.
 
 Recruiter demos must use clearly labeled fictional sample data and remain
-isolated from production authentication, APIs, storage, payments, media, and
-customer records. Do not publish shared production credentials as a demo path.
+isolated from customer records, privileged roles, payments, agreements,
+messages, and other production mutations. A demo may use the actual
+application runtime, authentication, and read APIs only when it has a separate
+non-privileged tenant, contains no production customer data, and enforces an
+independent server-side write barrier. Do not publish shared customer or staff
+credentials as a demo path.
 
 ## Before making the repository public
 

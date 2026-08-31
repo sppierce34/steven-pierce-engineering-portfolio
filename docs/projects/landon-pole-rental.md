@@ -3,12 +3,16 @@
 Public case study:
 `https://portfolio.pole-rental.com/projects/pole-rental`
 
-Read-only recruiter demo:
-`https://portfolio.pole-rental.com/demos/pole-rental`
+Live recruiter-demo entry point, pending application deployment:
+`https://pole-rental.com/recruiter-demo`
 
-The demo uses fictional inventory and rental records stored only in the
-portfolio. It has no authentication, payment, agreement, messaging, D1, R2, or
-production application connection.
+The recruiter route auto-authenticates a visitor into a separate fictional
+organization that uses the real Expo inventory and cart code. The seeded
+tenant has 12 sample poles and no Stripe customer, connected account,
+agreement, invoice, or rental records. Checkout ends in a local confirmation;
+the API independently rejects all authenticated write methods for the tenant.
+The route must not be linked publicly until migration `0025`, the API, and the
+self-hosted web application have been deployed and smoke-tested.
 
 ## Public summary
 
@@ -43,9 +47,13 @@ Stripe rather than the application database.
 
 ## Screenshot targets
 
-- Authenticated inventory browser
+- Authenticated inventory browser — approved and prepared August 30, 2026
 - Rental cart or checkout-readiness workflow
 - Staff pickup/return verification
 - Waitlist or rental-status screen
 
 Use a demo organization and sample inventory whenever possible.
+
+The current public asset shows the production inventory interface with 591
+poles and no customer identity or payment data. It is interface evidence, not
+the fictional dataset visitors will see in the recruiter demo.

@@ -40,6 +40,21 @@ the `chatgpt.site` hostname. The Sites project identifier remains in
   and live-product links remain explicit. The live main page was verified to
   contain all three project-page URLs and all three demo URLs.
 
+### Pole Rental recruiter-demo transition
+
+- Pole Rental application PR #4 adds `/recruiter-demo`, a fictional 12-pole
+  tenant that uses the real Expo inventory/cart code, simulates checkout
+  locally, and rejects authenticated writes at the API boundary.
+- The portfolio branch `codex/pole-rental-recruiter-demo` replaces the login
+  hero with Steven's cropped authenticated inventory screenshot, removes the
+  Pole Rental `Open read-only demo` and `Discuss the project` actions, and
+  points the one remaining action to
+  `https://pole-rental.com/recruiter-demo`.
+- Neither change is live yet. Merge and deploy the application first: apply
+  migration `0025`, deploy the API and self-hosted web client, then smoke-test
+  the recruiter route. Only after that should this portfolio branch be merged
+  and published through the existing Sites project.
+
 ## GitHub public release
 
 - Portfolio source: `https://github.com/sppierce34/steven-pierce-engineering-portfolio`
@@ -145,3 +160,6 @@ There is no remaining custom-domain activation or resume-hostname work.
 - Resolve the current `image-size` and `nanoid` audit advisories in a dedicated
   dependency update. Re-run the full test, lint, audit, and deployment workflow
   because the complete fix currently moves `vinext` beyond the pinned beta.
+- Complete the Pole Rental recruiter-demo deployment and production smoke test,
+  then merge and publish the prepared portfolio update. Do not publish the
+  portfolio CTA while the application route is unavailable.

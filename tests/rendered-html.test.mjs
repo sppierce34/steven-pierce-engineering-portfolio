@@ -69,9 +69,13 @@ test("server-renders the engineering portfolio", async () => {
     html,
     /https:\/\/portfolio\.landoncheckin\.com\/demos\/video-capture/,
   );
-  assert.match(
+  assert.doesNotMatch(
     html,
     /https:\/\/portfolio\.pole-rental\.com\/demos\/pole-rental/,
+  );
+  assert.match(
+    html,
+    /https:\/\/pole-rental\.com\/recruiter-demo/,
   );
   assert.match(
     html,
@@ -185,6 +189,26 @@ test("server-renders the authenticated Meet Manager showcase", async () => {
   assert.match(html, /meet-manager-dashboard\.png/);
   assert.match(html, /Authenticated Pole Vault Meet Manager dashboard/);
   assert.doesNotMatch(html, /Meet Manager production login screen/);
+});
+
+test("renders Pole Rental with one safe live-demo action and authenticated inventory evidence", async () => {
+  const response = await render(
+    "/projects/pole-rental",
+    "portfolio.pole-rental.com",
+  );
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /landon-pole-rental\.png/);
+  assert.match(html, /Authenticated Landon Pole Rental inventory browser/);
+  assert.match(html, /https:\/\/pole-rental\.com\/recruiter-demo/);
+  assert.match(html, /Fictional read-only tenant/);
+  assert.doesNotMatch(html, /Open read-only demo/);
+  assert.doesNotMatch(html, /Discuss the project/);
+  assert.doesNotMatch(
+    html,
+    /https:\/\/portfolio\.pole-rental\.com\/demos\/pole-rental/,
+  );
 });
 
 test("server-renders isolated recruiter demos for all three projects", async () => {
