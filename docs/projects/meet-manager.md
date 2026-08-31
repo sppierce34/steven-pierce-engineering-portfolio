@@ -60,6 +60,8 @@ Use staged or redacted records. Do not publish athlete contact details.
 - Label: `Open live scoring demo`
 - Target: `https://app.meetregistrationpv.com/recruiter-demo`
 - Fact: `Fresh fictional scoring flight`
+- This is the only case-study action; the redundant production-root
+  `Open live application` button is intentionally omitted.
 - The former portfolio-only read-only mock remains unlinked and is not the
   recruiter CTA.
 - Published in portfolio version 17 after the Meet Manager application route

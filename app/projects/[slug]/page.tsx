@@ -67,14 +67,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     {project.demoLabel ?? "Open read-only demo"} <span aria-hidden="true">→</span>
                   </a>
                 )}
-                <a
-                  className={project.showReadOnlyDemo === false ? "button button-primary" : "button button-secondary"}
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {project.liveLabel} <span aria-hidden="true">↗</span>
-                </a>
+                {project.showCaseStudyLiveAction !== false && (
+                  <a
+                    className={project.showReadOnlyDemo === false ? "button button-primary" : "button button-secondary"}
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {project.liveLabel} <span aria-hidden="true">↗</span>
+                  </a>
+                )}
                 {project.showDiscussion !== false && (
                   <a className="button button-quiet" href="mailto:sppierce34@yahoo.com">
                     Discuss the project

@@ -5,6 +5,39 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-08-31 - Simplify the Meet Manager case-study actions
+
+Scope:
+
+- Removed the redundant **Open live application** action from the Meet Manager
+  case study while preserving **Open live scoring demo** as its primary CTA.
+- Added rendered-page regression coverage and synchronized the Meet Manager
+  project note.
+
+Result:
+
+- Recruiters are directed to the safe fictional scoring flight instead of
+  being offered a second action to the production application root.
+- The main portfolio card's existing **Live app** link remains unchanged; this
+  adjustment is limited to the case-study action row.
+
+Validation:
+
+- `npm test` passed the production build and all 11 rendered-page tests,
+  including the Meet Manager action-row regression.
+- `npm run lint` completed with zero errors and the three pre-existing `<img>`
+  optimization warnings.
+
+Publishing:
+
+- Prepared for publication through the existing Sites project after local
+  validation.
+
+Follow-up:
+
+- Publish and verify the Meet Manager case-study URL, then record the Sites
+  version and live result here and in the current agent handoff.
+
 ## 2026-08-31 - Publish the real Meet Manager scoring demo CTA
 
 Scope:

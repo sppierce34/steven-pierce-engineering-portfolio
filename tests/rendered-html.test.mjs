@@ -201,6 +201,8 @@ test("server-renders the authenticated Meet Manager showcase", async () => {
   assert.match(html, /Open live scoring demo/);
   assert.match(html, /https:\/\/app\.meetregistrationpv\.com\/recruiter-demo/);
   assert.match(html, /Fresh fictional scoring flight/);
+  assert.doesNotMatch(html, /Open live application/);
+  assert.doesNotMatch(html, /href="https:\/\/meetregistrationpv\.com"/);
   assert.doesNotMatch(html, /Open read-only demo/);
   assert.doesNotMatch(html, /Discuss the project/);
   assert.doesNotMatch(
@@ -221,6 +223,7 @@ test("renders Pole Rental with one safe live-demo action and authenticated inven
   assert.match(html, /landon-pole-rental\.png/);
   assert.match(html, /Authenticated Landon Pole Rental inventory browser/);
   assert.match(html, /https:\/\/pole-rental\.com\/recruiter-demo/);
+  assert.match(html, /Open live application/);
   assert.match(html, /Fictional read-only tenant/);
   assert.doesNotMatch(html, /Open read-only demo/);
   assert.doesNotMatch(html, /Discuss the project/);
