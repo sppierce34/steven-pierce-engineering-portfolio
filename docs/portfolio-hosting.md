@@ -6,7 +6,7 @@ products without replacing or intercepting their customer-facing routes.
 
 ## Current status
 
-Verified on 2026-08-30:
+Verified on 2026-08-31:
 
 - All three custom domains are active with valid HTTPS certificates.
 - The three root URLs and three direct case-study URLs return HTTP 200 and the
@@ -43,8 +43,7 @@ the current records from Sites and manage them through the domain provider.
 - Landon Pole Rental case study:
   `https://portfolio.pole-rental.com/projects/pole-rental`
 - Meet Manager recruiter demo:
-  `https://app.meetregistrationpv.com/recruiter-demo` (pending application
-  deployment and portfolio publication)
+  `https://app.meetregistrationpv.com/recruiter-demo`
 - PV Video Capture recruiter demo:
   `https://demo.landoncheckin.com`
 - Landon Pole Rental recruiter demo:
@@ -70,5 +69,5 @@ belong in the portfolio hosting configuration.
 Meet Manager, PV Video Capture, and Pole Rental use dedicated fictional
 application contexts with server-side isolation so recruiters can exercise
 maintained production UI code without creating real registrations, bookings,
-rentals, or payment state. The Meet Manager application must be deployed and
-validated before its prepared portfolio CTA is published.
+rentals, or payment state. The Meet Manager CTA was published only after its
+application route was deployed and validated on both origins.

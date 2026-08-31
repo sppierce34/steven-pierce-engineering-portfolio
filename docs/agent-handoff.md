@@ -1,6 +1,6 @@
 # Current agent handoff
 
-Last verified: 2026-08-30
+Last verified: 2026-08-31
 
 This file is the shortest path to the repository's current operational state.
 Update it whenever live URLs, published content, hosting, validation status, or
@@ -27,38 +27,35 @@ the `chatgpt.site` hostname. The Sites project identifier remains in
 
 ## Recruiter demo state
 
-- PV Video Capture and Pole Rental have published isolated application demos.
-  The Meet Manager application and portfolio branches now prepare a real
-  scoring demo, but that replacement is not published until its application PR
-  is merged, deployed to both origins, and validated.
-- The prepared Meet Manager CTA is
+- Meet Manager, PV Video Capture, and Pole Rental have published isolated
+  application demos.
+- The Meet Manager CTA is
   `https://app.meetregistrationpv.com/recruiter-demo`. Each visit resets a
   fictional shared flight, auto-enters a short-lived non-admin session, and
   restricts that browser to the real scoring page and scoring mutations.
 - `components/ProjectDemo.tsx` and `lib/demo-scenarios.ts` still contain the
   former network-free Meet Manager sample for historical/source continuity,
-  but the prepared recruiter-facing pages no longer link to it.
+  but recruiter-facing pages no longer link to it.
 - All application demos use fictional data and server-side isolation that
   prevents production payment or operational state from being created.
 - Main-page project images, titles, and the prominent `View project page`
   actions link directly to each product-owned case-study route. Separate live
   demo links remain explicit.
 
-### Meet Manager recruiter demo (prepared; not yet published)
+### Meet Manager recruiter demo (live)
 
-- Application branch `codex/fresh-recruiter-scoring-demo` adds the rate-limited
-  `/recruiter-demo` route, target identity validation, automatic test-meet
-  reset, non-permanent login, and server-side score-only session guard.
+- The rate-limited `/recruiter-demo` route performs target identity validation,
+  automatic test-meet reset, non-permanent login, and a server-side score-only
+  session guard.
 - The demo target remains organization `3`, meet `21`, and flight `210`, all
-  fictional. Production must set `RECRUITER_DEMO_ENABLED=1` on both origins;
-  the existing IDs and `portfolio-demo` username are non-secret defaults.
-- Portfolio branch `codex/meet-manager-live-scoring-demo-cta` changes the Meet
-  Manager action to **Open live scoring demo**, links the application route,
-  shows **Fresh fictional scoring flight**, and removes **Discuss the project**.
-- Deployment order: merge application PR; configure/reload secondary then
-  main; verify direct origins and public failover; publish the portfolio branch
-  through the existing Sites project; verify the case-study CTA opens a fresh
-  fictional scoring page twice in succession.
+  fictional. `RECRUITER_DEMO_ENABLED=1` is active on both origins, and the
+  existing IDs and `portfolio-demo` username are non-secret defaults.
+- The Meet Manager case study now presents **Open live scoring demo**, links the
+  application route, shows **Fresh fictional scoring flight**, and omits
+  **Discuss the project**.
+- Portfolio version 17 published the CTA on August 31. Public browser acceptance
+  followed it into `/meet/21/flights/210/score`, where the **Recruiter scoring
+  sandbox** notice, fictional roster, and real Make/Miss/Pass controls rendered.
 
 ### PV Video Capture recruiter demo
 

@@ -3,8 +3,7 @@
 Public case study:
 `https://portfolio.meetregistrationpv.com/projects/meet-manager`
 
-Live scoring recruiter demo (publish only after the application route is
-deployed and validated):
+Live scoring recruiter demo:
 `https://app.meetregistrationpv.com/recruiter-demo`
 
 The demo uses the real Meet Manager flight scoring page and Convex scoring
@@ -63,6 +62,6 @@ Use staged or redacted records. Do not publish athlete contact details.
 - Fact: `Fresh fictional scoring flight`
 - The former portfolio-only read-only mock remains unlinked and is not the
   recruiter CTA.
-- Publish this CTA only after the Meet Manager application PR is merged,
-  `RECRUITER_DEMO_ENABLED=1` is active on both origins, and the public route has
-  passed reset, scoring, isolation, and failover smoke checks.
+- Published in portfolio version 17 after the Meet Manager application route
+  was enabled on both origins and passed reset, scoring, isolation, and
+  failover smoke checks.
