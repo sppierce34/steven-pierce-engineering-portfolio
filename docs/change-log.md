@@ -26,6 +26,10 @@ Validation:
 - `npm test` passed the production build and all 11 rendered-page tests.
 - `npm run lint` completed with zero errors and three pre-existing `<img>`
   optimization warnings.
+- GitHub Actions reached the existing dependency-audit gate and failed on the
+  already documented high-severity `image-size`/`vinext` and `nanoid`
+  advisories. The complete available fix still requires a separately validated
+  `vinext` beta upgrade; no new dependency was introduced by this change.
 - Application deployment and public browser acceptance remain required before
   this CTA can be published safely.
 
