@@ -39,8 +39,11 @@ Validation:
 
 Publishing:
 
-- The application demo and its public hostname are live. The portfolio update
-  is validated and will be published through the existing Sites project.
+- The application demo and its public hostname are live. Portfolio version 15
+  was published through the existing Sites project.
+- The product-owned PV case-study URL returned the new single CTA and dummy-
+  account fact. Following `Open live check-in` opened the isolated hostname,
+  where the fictional athlete's practice-video view loaded automatically.
 
 Follow-up:
 

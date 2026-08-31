@@ -58,6 +58,9 @@ the `chatgpt.site` hostname. The Sites project identifier remains in
 - The PV case study exposes only `Open live check-in`, linked directly to the
   dummy account. Its former `Open read-only demo` and `Discuss the project`
   actions are removed.
+- Portfolio version 15 published this CTA change. Live browser acceptance
+  followed the case-study link into the automatically opened dummy-athlete
+  practice-video view.
 
 ### Pole Rental recruiter demo
 
