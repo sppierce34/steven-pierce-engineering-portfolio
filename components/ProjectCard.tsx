@@ -25,9 +25,11 @@ export function ProjectCard({ project }: { project: Project }) {
           <a className="project-page-link" href={project.portfolioUrl}>
             View project page <span aria-hidden="true">→</span>
           </a>
-          <a href={project.demoUrl}>
-            Try demo <span aria-hidden="true">↗</span>
-          </a>
+          {project.showReadOnlyDemo !== false && (
+            <a href={project.demoUrl}>
+              Try demo <span aria-hidden="true">↗</span>
+            </a>
+          )}
           <a href={project.liveUrl} target="_blank" rel="noreferrer">
             Live app <span aria-hidden="true">↗</span>
           </a>

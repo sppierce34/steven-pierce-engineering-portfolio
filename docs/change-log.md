@@ -5,6 +5,94 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-08-30 - Publish the isolated Pole Rental application demo
+
+Scope:
+
+- Released the fictional Pole Rental recruiter tenant through the actual
+  production Expo application after application PR #4 was merged.
+- Published the prepared portfolio screenshot and single `Open live
+  application` CTA to `https://pole-rental.com/recruiter-demo`.
+- Removed the former Pole Rental read-only-demo and project-discussion actions;
+  the normal application sign-in screen also no longer exposes role-based demo
+  shortcuts.
+
+Result:
+
+- Recruiters now enter a fictional 12-pole account automatically and use the
+  same inventory/search/grouping/cart code maintained by the production app.
+- Demo completion remains local, while the API independently blocks rental,
+  reservation, agreement, account, and payment mutations.
+
+Validation:
+
+- Application typechecks and all 85 tests passed; the full D1 migration replay,
+  production web export, and Worker dry-run also passed.
+- Both production web servers reported healthy application and tunnel services
+  with the matching release bundle.
+- Live browser acceptance confirmed automatic login, 12 fictional poles, real
+  cart interaction, local-only completion, and no browser warnings or errors.
+- Direct production tests returned HTTP 403 for rental creation and Better Auth
+  account mutation, HTTP 200 for sign-out, and final database checks remained
+  at zero demo rentals and zero Stripe customers.
+- Portfolio `npm test` and lint completed successfully; CI's build/test/lint
+  phases passed, with only the already documented dependency-audit advisories
+  keeping the combined workflow red.
+
+Publishing:
+
+- Published through the existing Sites project and verified on the Pole Rental
+  product-owned portfolio domain.
+
+Follow-up:
+
+- None for this demo rollout.
+
+## 2026-08-30 - Prepare the real Pole Rental recruiter demo and inventory showcase
+
+Scope:
+
+- Replaced the Pole Rental login image with Steven's authenticated inventory
+  capture and removed its Chrome tabs, address bar, and bookmarks.
+- Removed the Pole Rental `Open read-only demo` and `Discuss the project`
+  actions from the case study and removed the old demo link from its main-page
+  card.
+- Pointed the single `Open live application` action at the prepared
+  `/recruiter-demo` entry point in the actual Pole Rental application.
+
+Result:
+
+- The case study now presents a current production inventory workflow rather
+  than a sign-in form.
+- Once deployed, recruiters will enter a fictional 12-pole tenant through the
+  actual application code, browse inventory, add poles to the real cart UI,
+  and complete a simulated checkout without creating a rental, reservation,
+  agreement, account change, or Stripe activity.
+- Pole Rental application PR #4 implements the tenant, automatic login, local
+  checkout simulation, and an independent API write barrier.
+
+Validation:
+
+- Visually reviewed the cropped image and confirmed it contains no browser UI,
+  user identity, contact detail, credential, payment information, or token.
+- Added rendered-page regression coverage for the single CTA, updated image,
+  fictional-tenant fact, and absence of the two removed actions.
+- `npm test` passed the production build and all 11 rendered-page tests.
+- `npm run lint` completed with zero errors and the three existing
+  image-optimization warnings.
+
+Publishing:
+
+- Not published. The portfolio must not expose the new link until Pole Rental
+  PR #4 is merged, migration `0025` is applied, the API and self-hosted web app
+  are deployed, and the public recruiter route passes a smoke test.
+
+Follow-up:
+
+- Complete the application deployment first, then merge this portfolio branch,
+  publish it through the existing Sites project, and verify the affected
+  product-owned URLs.
+
 ## 2026-08-30 - Replace the PV Video Capture labeling screenshot
 
 Scope:

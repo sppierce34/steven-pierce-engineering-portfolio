@@ -16,6 +16,9 @@ export type Project = {
   liveLabel: string;
   portfolioUrl: string;
   demoUrl: string;
+  showReadOnlyDemo?: boolean;
+  showDiscussion?: boolean;
+  demoFact?: string;
   stack: string[];
   highlights: string[];
   modelTraining?: {
@@ -175,11 +178,14 @@ export const projects: Project[] = [
     platforms: "Web, iOS, Android",
     role: "Product owner and full-stack engineer",
     image: "/projects/landon-pole-rental.png",
-    imageAlt: "Landon Pole Rental production sign-in screen",
-    liveUrl: "https://pole-rental.com",
+    imageAlt: "Authenticated Landon Pole Rental inventory browser showing searchable pole groups",
+    liveUrl: "https://pole-rental.com/recruiter-demo",
     liveLabel: "Open live application",
     portfolioUrl: "https://portfolio.pole-rental.com/projects/pole-rental",
     demoUrl: "https://portfolio.pole-rental.com/demos/pole-rental",
+    showReadOnlyDemo: false,
+    showDiscussion: false,
+    demoFact: "Fictional read-only tenant",
     stack: [
       "TypeScript",
       "Expo Router",

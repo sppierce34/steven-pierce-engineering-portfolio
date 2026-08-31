@@ -62,15 +62,24 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <h1>{project.title}</h1>
               <p className="case-summary">{project.summary}</p>
               <div className="case-actions">
-                <a className="button button-primary" href={project.demoUrl}>
-                  Open read-only demo <span aria-hidden="true">→</span>
-                </a>
-                <a className="button button-secondary" href={project.liveUrl} target="_blank" rel="noreferrer">
+                {project.showReadOnlyDemo !== false && (
+                  <a className="button button-primary" href={project.demoUrl}>
+                    Open read-only demo <span aria-hidden="true">→</span>
+                  </a>
+                )}
+                <a
+                  className={project.showReadOnlyDemo === false ? "button button-primary" : "button button-secondary"}
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {project.liveLabel} <span aria-hidden="true">↗</span>
                 </a>
-                <a className="button button-quiet" href="mailto:sppierce34@yahoo.com">
-                  Discuss the project
-                </a>
+                {project.showDiscussion !== false && (
+                  <a className="button button-quiet" href="mailto:sppierce34@yahoo.com">
+                    Discuss the project
+                  </a>
+                )}
               </div>
             </div>
             <div className="case-facts" aria-label="Project facts">
@@ -92,7 +101,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </div>
               <div>
                 <span>Demo</span>
-                <strong>Isolated sample data</strong>
+                <strong>{project.demoFact ?? "Isolated sample data"}</strong>
               </div>
             </div>
           </div>
