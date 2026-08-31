@@ -78,6 +78,10 @@ the `chatgpt.site` hostname. The Sites project identifier remains in
 - Portfolio version 15 published this CTA change. Live browser acceptance
   followed the case-study link into the automatically opened dummy-athlete
   practice-video view.
+- The unused accidental DNS record
+  `demo.landoncheckin.com.meetregistrationpv.com` was removed from the
+  `meetregistrationpv.com` zone. The intended `demo.landoncheckin.com` hostname
+  still resolves and returns HTTP 200.
 
 ### Pole Rental recruiter demo
 

@@ -45,6 +45,36 @@ Follow-up:
   then publish this portfolio branch through the existing Sites project and
   update this entry with the version and public acceptance result.
 
+## 2026-08-30 - Remove an unused accidental DNS record
+
+Scope:
+
+- Deleted the unused `demo.landoncheckin.com.meetregistrationpv.com` CNAME
+  from the `meetregistrationpv.com` Cloudflare zone.
+
+Result:
+
+- The accidental nested hostname no longer resolves. The intended PV Video
+  Capture recruiter-demo hostname and its Cloudflare Tunnel configuration were
+  not changed.
+
+Validation:
+
+- Cloudflare's filtered DNS-record view returned no matching record after the
+  deletion.
+- A public lookup through Cloudflare DNS returned no record for the accidental
+  hostname, while `demo.landoncheckin.com` continued to resolve and its HTTPS
+  root returned HTTP 200.
+
+Publishing:
+
+- No portfolio application deployment was required; this was a DNS-only
+  cleanup documented in the repository.
+
+Follow-up:
+
+- None.
+
 ## 2026-08-30 - Publish the isolated PV Video Capture application demo
 
 Scope:
