@@ -28,10 +28,11 @@ Validation:
 - `npm test` passed the production build and all 11 rendered-page tests.
 - `npm run lint` completed with zero errors and three pre-existing `<img>`
   optimization warnings.
-- Public browser acceptance loaded the product-owned case-study route, found
-  the exact recruiter-demo target, clicked **Open live scoring demo**, and
-  reached `/meet/21/flights/210/score` with the **Recruiter scoring sandbox**
-  notice, fictional roster, and scoring controls visible.
+- Public browser acceptance loaded the product-owned homepage, confirmed the
+  Meet Manager **Try demo** target, clicked it, and reached
+  `/meet/21/flights/210/score` with the **Recruiter scoring sandbox** notice,
+  fictional roster, and scoring controls visible. The case-study
+  **Open live scoring demo** action was verified against the same target.
 
 Publishing:
 
