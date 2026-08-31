@@ -22,6 +22,11 @@ Verified on 2026-08-30:
 - The public PDF route is Worker-served from an internal asset filename. This
   prevents the outer static asset layer from bypassing the legacy-host redirect
   for `/Steven-Pierce-Resume.pdf`.
+- Removed the unused accidental
+  `demo.landoncheckin.com.meetregistrationpv.com` CNAME from the
+  `meetregistrationpv.com` zone. Public DNS now returns no record for that
+  hostname, while the intended `https://demo.landoncheckin.com` recruiter demo
+  continues to return HTTP 200.
 
 Validation values are intentionally not copied into this repository. Retrieve
 the current records from Sites and manage them through the domain provider.
