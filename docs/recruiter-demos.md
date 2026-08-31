@@ -2,7 +2,7 @@
 
 The portfolio provides safe recruiter entry points for each featured project.
 Meet Manager and PV Video Capture use static, portfolio-only sample views.
-Pole Rental is moving to a separate fictional tenant inside the actual Expo
+Pole Rental uses a separate fictional tenant inside the actual Expo
 application so future product updates are reflected in the demo automatically.
 
 ## Public routes
@@ -11,7 +11,7 @@ application so future product updates are reflected in the demo automatically.
   `https://portfolio.meetregistrationpv.com/demos/meet-manager`
 - PV Video Capture:
   `https://portfolio.landoncheckin.com/demos/video-capture`
-- Landon Pole Rental, pending application deployment:
+- Landon Pole Rental:
   `https://pole-rental.com/recruiter-demo`
 
 ## Isolation boundary
@@ -54,7 +54,8 @@ application so future product updates are reflected in the demo automatically.
 
 ## Current publishing state
 
-The Pole Rental application work is in `sppierce34/landon-pole-rental` PR #4.
-This portfolio branch prepares the new screenshot and link but must not be
-published until that PR is merged, migration `0025` is applied, the API and web
-application are deployed, and `/recruiter-demo` passes a production smoke test.
+Pole Rental application PR #4 is merged and deployed. Migration `0025`, the
+API, and both self-hosted web servers were released before the portfolio CTA.
+Production smoke confirmed automatic login, 12 fictional inventory records,
+the real cart interaction, local-only completion, server-side rental and
+account-mutation rejection, successful sign-out, and zero rental/Stripe rows.

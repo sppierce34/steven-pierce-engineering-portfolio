@@ -3,7 +3,7 @@
 Public case study:
 `https://portfolio.pole-rental.com/projects/pole-rental`
 
-Live recruiter-demo entry point, pending application deployment:
+Live recruiter-demo entry point:
 `https://pole-rental.com/recruiter-demo`
 
 The recruiter route auto-authenticates a visitor into a separate fictional
@@ -11,8 +11,10 @@ organization that uses the real Expo inventory and cart code. The seeded
 tenant has 12 sample poles and no Stripe customer, connected account,
 agreement, invoice, or rental records. Checkout ends in a local confirmation;
 the API independently rejects all authenticated write methods for the tenant.
-The route must not be linked publicly until migration `0025`, the API, and the
-self-hosted web application have been deployed and smoke-tested.
+Migration `0025`, the API, and both self-hosted web servers were deployed and
+smoke-tested on August 30, 2026. Live acceptance confirmed the real inventory
+and cart UI, local-only completion, HTTP 403 write barriers, successful
+sign-out, and zero demo rental or Stripe-customer rows.
 
 ## Public summary
 

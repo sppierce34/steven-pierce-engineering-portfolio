@@ -41,7 +41,7 @@ the current records from Sites and manage them through the domain provider.
   `https://portfolio.meetregistrationpv.com/demos/meet-manager`
 - PV Video Capture recruiter demo:
   `https://portfolio.landoncheckin.com/demos/video-capture`
-- Landon Pole Rental recruiter demo, pending application deployment:
+- Landon Pole Rental recruiter demo:
   `https://pole-rental.com/recruiter-demo`
 
 The root request on `portfolio.landoncheckin.com` renders the PV Video Capture

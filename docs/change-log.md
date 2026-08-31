@@ -5,6 +5,49 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-08-30 - Publish the isolated Pole Rental application demo
+
+Scope:
+
+- Released the fictional Pole Rental recruiter tenant through the actual
+  production Expo application after application PR #4 was merged.
+- Published the prepared portfolio screenshot and single `Open live
+  application` CTA to `https://pole-rental.com/recruiter-demo`.
+- Removed the former Pole Rental read-only-demo and project-discussion actions;
+  the normal application sign-in screen also no longer exposes role-based demo
+  shortcuts.
+
+Result:
+
+- Recruiters now enter a fictional 12-pole account automatically and use the
+  same inventory/search/grouping/cart code maintained by the production app.
+- Demo completion remains local, while the API independently blocks rental,
+  reservation, agreement, account, and payment mutations.
+
+Validation:
+
+- Application typechecks and all 85 tests passed; the full D1 migration replay,
+  production web export, and Worker dry-run also passed.
+- Both production web servers reported healthy application and tunnel services
+  with the matching release bundle.
+- Live browser acceptance confirmed automatic login, 12 fictional poles, real
+  cart interaction, local-only completion, and no browser warnings or errors.
+- Direct production tests returned HTTP 403 for rental creation and Better Auth
+  account mutation, HTTP 200 for sign-out, and final database checks remained
+  at zero demo rentals and zero Stripe customers.
+- Portfolio `npm test` and lint completed successfully; CI's build/test/lint
+  phases passed, with only the already documented dependency-audit advisories
+  keeping the combined workflow red.
+
+Publishing:
+
+- Published through the existing Sites project and verified on the Pole Rental
+  product-owned portfolio domain.
+
+Follow-up:
+
+- None for this demo rollout.
+
 ## 2026-08-30 - Prepare the real Pole Rental recruiter demo and inventory showcase
 
 Scope:
