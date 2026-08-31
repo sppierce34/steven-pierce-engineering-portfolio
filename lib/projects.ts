@@ -16,6 +16,7 @@ export type Project = {
   liveLabel: string;
   portfolioUrl: string;
   demoUrl: string;
+  demoLabel?: string;
   showReadOnlyDemo?: boolean;
   showDiscussion?: boolean;
   demoFact?: string;
@@ -50,7 +51,10 @@ export const projects: Project[] = [
     liveUrl: "https://meetregistrationpv.com",
     liveLabel: "Open live application",
     portfolioUrl: "https://portfolio.meetregistrationpv.com/projects/meet-manager",
-    demoUrl: "https://portfolio.meetregistrationpv.com/demos/meet-manager",
+    demoUrl: "https://app.meetregistrationpv.com/recruiter-demo",
+    demoLabel: "Open live scoring demo",
+    showDiscussion: false,
+    demoFact: "Fresh fictional scoring flight",
     stack: [
       "Python",
       "Flask",

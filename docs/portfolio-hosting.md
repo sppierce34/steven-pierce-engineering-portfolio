@@ -38,7 +38,8 @@ the current records from Sites and manage them through the domain provider.
 - Landon Pole Rental case study:
   `https://portfolio.pole-rental.com/projects/pole-rental`
 - Meet Manager recruiter demo:
-  `https://portfolio.meetregistrationpv.com/demos/meet-manager`
+  `https://app.meetregistrationpv.com/recruiter-demo` (pending application
+  deployment and portfolio publication)
 - PV Video Capture recruiter demo:
   `https://demo.landoncheckin.com`
 - Landon Pole Rental recruiter demo:
@@ -61,7 +62,8 @@ Only the dedicated `portfolio.` subdomains point to the Sites deployment. No
 application credentials, private data, or internal infrastructure addresses
 belong in the portfolio hosting configuration.
 
-Meet Manager remains a portfolio-only route backed by static fictional records.
-PV Video Capture and Pole Rental use dedicated fictional application contexts
-with server-side isolation so recruiters can exercise maintained production UI
-code without creating production bookings, rentals, or payment state.
+Meet Manager, PV Video Capture, and Pole Rental use dedicated fictional
+application contexts with server-side isolation so recruiters can exercise
+maintained production UI code without creating real registrations, bookings,
+rentals, or payment state. The Meet Manager application must be deployed and
+validated before its prepared portfolio CTA is published.

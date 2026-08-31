@@ -1,14 +1,13 @@
 # Recruiter demos
 
 The portfolio provides safe recruiter entry points for each featured project.
-Meet Manager uses a static, portfolio-only sample view. PV Video Capture and
-Pole Rental use isolated fictional accounts inside their actual maintained
+All three now use isolated fictional contexts inside their maintained
 applications so future product updates are reflected in the demos.
 
 ## Public routes
 
 - Pole Vault Meet Manager:
-  `https://portfolio.meetregistrationpv.com/demos/meet-manager`
+  `https://app.meetregistrationpv.com/recruiter-demo`
 - PV Video Capture:
   `https://demo.landoncheckin.com`
 - Landon Pole Rental:
@@ -16,13 +15,12 @@ applications so future product updates are reflected in the demos.
 
 ## Isolation boundary
 
-- Meet Manager content is defined as fictional, static sample data in
-  `lib/demo-scenarios.ts`.
-- `components/ProjectDemo.tsx` switches among local views only. It has no
-  network, browser-storage, form-submission, authentication, or persistence
-  integration.
-- The Meet Manager static demo does not call production APIs, databases,
-  Stripe, media storage, email, or authentication providers.
+- Meet Manager auto-enters a short-lived non-admin session for a dedicated
+  fictional organization/test meet, resets the shared flight on every entry,
+  and uses the real Flask/Convex score page. A server-side allowlist keeps the
+  session on that exact flight and rejects non-scoring mutations. The static
+  portfolio-only scenario remains in source for historical comparison but is
+  no longer linked from recruiter-facing pages.
 - The PV Video Capture demo uses the real Clips and Lessons modules in a
   separate loopback service with its own SQLite database, ignored approved-
   media manifest, dedicated Tunnel, fictional athlete, and browser-only lesson
@@ -35,7 +33,8 @@ applications so future product updates are reflected in the demos.
 
 ## Demonstrated workflows
 
-- Meet Manager: event overview, athlete check-in, and scoring state.
+- Meet Manager: real flight scoring with Make, Miss, Pass, Undo, Skip, and bar
+  progression on a freshly reset fictional roster.
 - PV Video Capture: signed playback of approved practice clips and fictional
   one-on-one practice registration with no payment.
 - Pole Rental: actual inventory search, pole selection, cart, and a simulated
@@ -53,10 +52,15 @@ applications so future product updates are reflected in the demos.
    simulates the action.
 4. Update the matching project note, tests, handoff, and change log whenever a
    demo route or displayed feature changes.
-5. Verify the Meet Manager portfolio route and both real-application demo routes
+5. Verify the Meet Manager portfolio route and all three application demo routes
    after each affected deployment.
 
 ## Current publishing state
+
+The Meet Manager auto-entry route and portfolio CTA are prepared but not yet
+published. Deploy the application first, enable and validate the route on both
+origins, then publish this portfolio change. Until that sequence completes, the
+currently published Meet Manager CTA still opens the portfolio-only sample.
 
 PV Video Capture is deployed at `demo.landoncheckin.com` through a dedicated
 Tunnel and loopback-only service. Public browser acceptance confirmed automatic
