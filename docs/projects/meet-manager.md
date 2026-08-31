@@ -67,3 +67,5 @@ Use staged or redacted records. Do not publish athlete contact details.
 - Published in portfolio version 17 after the Meet Manager application route
   was enabled on both origins and passed reset, scoring, isolation, and
   failover smoke checks.
+- Portfolio version 18 removed the redundant production-root case-study action
+  and retained the scoring demo as the single CTA.

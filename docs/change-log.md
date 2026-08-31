@@ -30,13 +30,14 @@ Validation:
 
 Publishing:
 
-- Prepared for publication through the existing Sites project after local
-  validation.
+- Portfolio version 18 is live on the existing Sites project.
+- A fresh request to the product-owned Meet Manager case-study URL returned
+  HTTP 200 with **Open live scoring demo** present and no **Open live
+  application** label or production-root anchor.
 
 Follow-up:
 
-- Publish and verify the Meet Manager case-study URL, then record the Sites
-  version and live result here and in the current agent handoff.
+- None.
 
 ## 2026-08-31 - Publish the real Meet Manager scoring demo CTA
 
