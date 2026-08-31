@@ -5,6 +5,47 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-08-30 - Publish the isolated PV Video Capture application demo
+
+Scope:
+
+- Deployed the real PV Video Capture / Landon Check-In web interface as a
+  separate recruiter runtime at `https://demo.landoncheckin.com`.
+- Removed the PV case study's `Open read-only demo` and `Discuss the project`
+  actions and pointed its remaining `Open live check-in` action at the dummy
+  athlete session.
+
+Result:
+
+- Recruiters now enter the fictional Demo Athlete automatically, view four
+  approved practice clips through the maintained Clips module, and explore
+  fictional one-on-one practice registration through the maintained Lessons
+  module without credentials or payment access.
+- The demo is separated from production by an isolated SQLite database,
+  approved-media manifest, loopback service, dedicated Tunnel, fail-closed
+  integration checks, and a restricted HTTP route allowlist.
+
+Validation:
+
+- Public root and sanitized health requests returned HTTP 200; production
+  login, Stripe webhook, labeling, and generic health routes returned HTTP 403.
+- Browser acceptance confirmed automatic dummy-athlete entry, signed video
+  playback, a browser-only fictional registration, no Stripe navigation, and
+  the **No payment collected** result.
+- The isolated database contained two fictional athletes, one active browser
+  session, four clips, zero lesson bookings, and zero queued email.
+- The PV application full gate passed 1,068 tests with 2 expected skips and 7
+  subtests; its web lint and production build also passed.
+
+Publishing:
+
+- The application demo and its public hostname are live. The portfolio update
+  is validated and will be published through the existing Sites project.
+
+Follow-up:
+
+- Review and merge PV Video Capture documentation PR #201.
+
 ## 2026-08-30 - Publish the isolated Pole Rental application demo
 
 Scope:

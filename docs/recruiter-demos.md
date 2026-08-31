@@ -1,30 +1,33 @@
 # Recruiter demos
 
 The portfolio provides safe recruiter entry points for each featured project.
-Meet Manager and PV Video Capture use static, portfolio-only sample views.
-Pole Rental uses a separate fictional tenant inside the actual Expo
-application so future product updates are reflected in the demo automatically.
+Meet Manager uses a static, portfolio-only sample view. PV Video Capture and
+Pole Rental use isolated fictional accounts inside their actual maintained
+applications so future product updates are reflected in the demos.
 
 ## Public routes
 
 - Pole Vault Meet Manager:
   `https://portfolio.meetregistrationpv.com/demos/meet-manager`
 - PV Video Capture:
-  `https://portfolio.landoncheckin.com/demos/video-capture`
+  `https://demo.landoncheckin.com`
 - Landon Pole Rental:
   `https://pole-rental.com/recruiter-demo`
 
 ## Isolation boundary
 
-- Meet Manager and PV Video Capture content is defined as fictional, static
-  sample data in `lib/demo-scenarios.ts`.
+- Meet Manager content is defined as fictional, static sample data in
+  `lib/demo-scenarios.ts`.
 - `components/ProjectDemo.tsx` switches among local views only. It has no
   network, browser-storage, form-submission, authentication, or persistence
   integration.
-- Those two static demos do not call production APIs, databases, Stripe, media
-  storage, cameras, email, push services, or authentication providers.
-- No production application repository, account, permission, or deployment is
-  changed by the two static recruiter demos.
+- The Meet Manager static demo does not call production APIs, databases,
+  Stripe, media storage, email, or authentication providers.
+- The PV Video Capture demo uses the real Clips and Lessons modules in a
+  separate loopback service with its own SQLite database, ignored approved-
+  media manifest, dedicated Tunnel, fictional athlete, and browser-only lesson
+  bookings. Its fail-closed guard blocks production login, registration,
+  Stripe, admin, labeling, sync, cameras, downloads, and every unapproved API.
 - The Pole Rental demo uses the production application code but a dedicated
   fictional organization. Its normal checkout is simulated locally, and its
   API rejects every authenticated non-read request for that organization. It
@@ -33,7 +36,8 @@ application so future product updates are reflected in the demo automatically.
 ## Demonstrated workflows
 
 - Meet Manager: event overview, athlete check-in, and scoring state.
-- PV Video Capture: camera health, clip delivery, and model-review evidence.
+- PV Video Capture: signed playback of approved practice clips and fictional
+  one-on-one practice registration with no payment.
 - Pole Rental: actual inventory search, pole selection, cart, and a simulated
   checkout that creates no rental, reservation, agreement, or payment.
 
@@ -49,10 +53,17 @@ application so future product updates are reflected in the demo automatically.
    simulates the action.
 4. Update the matching project note, tests, handoff, and change log whenever a
    demo route or displayed feature changes.
-5. Verify the two portfolio routes and the Pole Rental application route after
-   each affected deployment.
+5. Verify the Meet Manager portfolio route and both real-application demo routes
+   after each affected deployment.
 
 ## Current publishing state
+
+PV Video Capture is deployed at `demo.landoncheckin.com` through a dedicated
+Tunnel and loopback-only service. Public browser acceptance confirmed automatic
+dummy-athlete entry, four approved clips across two practice dates, signed
+playback, fictional practice registration, no Stripe navigation, zero stored
+lesson bookings, and HTTP 403 on production login, Stripe webhook, labeling,
+and generic health routes.
 
 Pole Rental application PR #4 is merged and deployed. Migration `0025`, the
 API, and both self-hosted web servers were released before the portfolio CTA.

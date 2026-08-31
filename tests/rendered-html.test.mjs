@@ -65,7 +65,7 @@ test("server-renders the engineering portfolio", async () => {
     html,
     /https:\/\/portfolio\.meetregistrationpv\.com\/demos\/meet-manager/,
   );
-  assert.match(
+  assert.doesNotMatch(
     html,
     /https:\/\/portfolio\.landoncheckin\.com\/demos\/video-capture/,
   );
@@ -76,6 +76,10 @@ test("server-renders the engineering portfolio", async () => {
   assert.match(
     html,
     /https:\/\/pole-rental\.com\/recruiter-demo/,
+  );
+  assert.match(
+    html,
+    /https:\/\/demo\.landoncheckin\.com/,
   );
   assert.match(
     html,
@@ -171,9 +175,15 @@ test("server-renders a project case study", async () => {
   assert.match(html, /scene-segmentation mask mAP50/);
   assert.match(html, /Publish a candidate only when it beats the current same-split baseline/);
   assert.match(html, /Open live check-in/);
-  assert.match(html, /Open read-only demo/);
+  assert.match(html, /https:\/\/demo\.landoncheckin\.com/);
+  assert.match(html, /Isolated dummy athlete account/);
+  assert.doesNotMatch(html, /Open read-only demo/);
+  assert.doesNotMatch(html, /Discuss the project/);
   assert.match(html, /Private repository/);
-  assert.match(html, /Isolated sample data/);
+  assert.doesNotMatch(
+    html,
+    /https:\/\/portfolio\.landoncheckin\.com\/demos\/video-capture/,
+  );
   assert.match(
     html,
     /https:\/\/portfolio\.landoncheckin\.com\/projects\/pv-labeling-workspace\.png/,

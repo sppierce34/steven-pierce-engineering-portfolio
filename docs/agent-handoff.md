@@ -27,21 +27,37 @@ the `chatgpt.site` hostname. The Sites project identifier remains in
 
 ## Recruiter demo state
 
-- Three recruiter demos are available: static portfolio-only views for Meet
-  Manager and PV Video Capture, plus the isolated real-application Pole Rental
-  inventory/cart flow.
+- Three recruiter demos are available: a static portfolio-only Meet Manager
+  view plus isolated real-application PV Video Capture and Pole Rental flows.
 - Their public routes are documented in `docs/recruiter-demos.md`; all three
   returned HTTP 200 with the expected isolated-demo content after publishing.
-- Meet Manager and PV Video Capture demo data is fictional and defined in
-  `lib/demo-scenarios.ts`; Pole Rental uses a separate fictional application
-  tenant with a server-side write barrier.
-- `components/ProjectDemo.tsx` has no network, browser-storage, form,
-  authentication, or persistence integration. The production application
-  repositories, accounts, services, and deployments are unchanged.
+- Meet Manager data is fictional and defined in `lib/demo-scenarios.ts`. PV
+  Video Capture uses a dedicated demo service, dummy athlete, isolated SQLite
+  database, approved practice-video manifest, and blocked production routes.
+  Pole Rental uses a separate fictional application tenant with a server-side
+  write barrier.
+- `components/ProjectDemo.tsx` remains the network-free static Meet Manager
+  implementation. The two application demos are isolated by their source
+  repositories and cannot create production payment or operational state.
 - Main-page project images, titles, and the prominent `View project page`
-  actions link directly to each product-owned case-study route. Separate demo
-  and live-product links remain explicit. The live main page was verified to
-  contain all three project-page URLs and all three demo URLs.
+  actions link directly to each product-owned case-study route. Separate live
+  demo links remain explicit.
+
+### PV Video Capture recruiter demo
+
+- `https://demo.landoncheckin.com` auto-opens the fictional Demo Athlete in the
+  real Clips interface. Four explicitly approved clips across two practice
+  dates play through signed Cloudflare Stream sessions.
+- The real Lessons interface exposes fictional one-on-one practices. The demo
+  registration is browser-session-only, stays on the demo hostname, reports
+  **No payment collected**, and stores no lesson booking.
+- The service runs separately from production with its own loopback port,
+  SQLite data, media manifest, and Cloudflare Tunnel. Public checks returned
+  HTTP 403 for production login, Stripe webhook, labeling, and generic health
+  routes.
+- The PV case study exposes only `Open live check-in`, linked directly to the
+  dummy account. Its former `Open read-only demo` and `Discuss the project`
+  actions are removed.
 
 ### Pole Rental recruiter demo
 
@@ -163,3 +179,5 @@ There is no remaining custom-domain activation or resume-hostname work.
 - Resolve the current `image-size` and `nanoid` audit advisories in a dedicated
   dependency update. Re-run the full test, lint, audit, and deployment workflow
   because the complete fix currently moves `vinext` beyond the pinned beta.
+- Review and merge PV Video Capture PR #201, which records the live demo
+  deployment and corrects its tracked service/environment examples.

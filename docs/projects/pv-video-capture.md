@@ -3,12 +3,16 @@
 Public case study:
 `https://portfolio.landoncheckin.com/projects/video-capture`
 
-Read-only recruiter demo:
-`https://portfolio.landoncheckin.com/demos/video-capture`
+Live recruiter demo:
+`https://demo.landoncheckin.com`
 
-The demo presents fictional capture, clip, and model-review records. It does
-not connect to cameras, athlete accounts, private media, hosted services, or
-the production capture environment.
+The demo runs the real Landon Check-In / PV Video Capture web application in a
+separate, fail-closed runtime. It automatically opens a fictional athlete
+account, exposes only four explicitly approved practice clips, and offers
+fictional one-on-one practices with browser-session registration. It uses an
+isolated SQLite database and a dedicated Cloudflare Tunnel; Stripe, Convex,
+email, cameras, labeling, admin routes, production sync, and clip downloads are
+disabled or blocked.
 
 ## Public summary
 
@@ -57,6 +61,10 @@ Enabled athletes can securely browse, stream, and download clips assigned to
 their account plus clips from practice dates they attended. Playback uses
 short-lived signed Cloudflare Stream sessions, and the production API enforces
 the account and attendance rules before returning watch or stream URLs.
+
+The public recruiter demo uses this same maintained Clips and Lessons code,
+but only against its dummy athlete session, approved-media manifest, and
+fictional practices. Demo registration never creates a booking or payment.
 
 ## Stripe integration
 

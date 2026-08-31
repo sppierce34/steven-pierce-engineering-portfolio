@@ -40,7 +40,7 @@ the current records from Sites and manage them through the domain provider.
 - Meet Manager recruiter demo:
   `https://portfolio.meetregistrationpv.com/demos/meet-manager`
 - PV Video Capture recruiter demo:
-  `https://portfolio.landoncheckin.com/demos/video-capture`
+  `https://demo.landoncheckin.com`
 - Landon Pole Rental recruiter demo:
   `https://pole-rental.com/recruiter-demo`
 
@@ -61,8 +61,7 @@ Only the dedicated `portfolio.` subdomains point to the Sites deployment. No
 application credentials, private data, or internal infrastructure addresses
 belong in the portfolio hosting configuration.
 
-Meet Manager and PV Video Capture recruiter demos are portfolio-only routes
-backed by static fictional records. Pole Rental instead uses a dedicated,
-fictional application tenant with a server-side write barrier so recruiters
-can exercise the actual inventory and cart code without creating rental or
-payment state.
+Meet Manager remains a portfolio-only route backed by static fictional records.
+PV Video Capture and Pole Rental use dedicated fictional application contexts
+with server-side isolation so recruiters can exercise maintained production UI
+code without creating production bookings, rentals, or payment state.
