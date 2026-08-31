@@ -57,10 +57,11 @@ applications so future product updates are reflected in the demos.
 
 ## Current publishing state
 
-The Meet Manager auto-entry route and portfolio CTA are prepared but not yet
-published. Deploy the application first, enable and validate the route on both
-origins, then publish this portfolio change. Until that sequence completes, the
-currently published Meet Manager CTA still opens the portfolio-only sample.
+The Meet Manager auto-entry route and portfolio CTA are live. Portfolio version
+17 publishes **Open live scoring demo** to the application route, and public
+browser acceptance followed the CTA into the real score page with the
+**Recruiter scoring sandbox** notice and fictional roster visible. The former
+portfolio-only sample remains in source but is no longer linked.
 
 PV Video Capture is deployed at `demo.landoncheckin.com` through a dedicated
 Tunnel and loopback-only service. Public browser acceptance confirmed automatic

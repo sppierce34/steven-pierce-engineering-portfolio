@@ -5,6 +5,44 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-08-31 - Publish the real Meet Manager scoring demo CTA
+
+Scope:
+
+- Published the prepared Meet Manager case-study CTA that points to
+  `https://app.meetregistrationpv.com/recruiter-demo`.
+- Replaced the public portfolio-only mock entry with **Open live scoring demo**
+  and the **Fresh fictional scoring flight** fact.
+- Updated the current handoff, recruiter-demo, project, and hosting notes from
+  prepared to live.
+
+Result:
+
+- Recruiters now leave the portfolio case study and enter the maintained Meet
+  Manager score page in a fresh, short-lived, score-only demo session.
+- The former portfolio-only sample remains unlinked in source for historical
+  continuity.
+
+Validation:
+
+- `npm test` passed the production build and all 11 rendered-page tests.
+- `npm run lint` completed with zero errors and three pre-existing `<img>`
+  optimization warnings.
+- Public browser acceptance loaded the product-owned homepage, confirmed the
+  Meet Manager **Try demo** target, clicked it, and reached
+  `/meet/21/flights/210/score` with the **Recruiter scoring sandbox** notice,
+  fictional roster, and scoring controls visible. The case-study
+  **Open live scoring demo** action was verified against the same target.
+
+Publishing:
+
+- Portfolio version 17 is live on the existing Sites project and its custom
+  domains.
+
+Follow-up:
+
+- None.
+
 ## 2026-08-30 - Prepare the real Meet Manager scoring demo CTA
 
 Scope:
