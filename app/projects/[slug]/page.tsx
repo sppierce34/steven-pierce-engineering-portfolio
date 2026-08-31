@@ -64,7 +64,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <div className="case-actions">
                 {project.showReadOnlyDemo !== false && (
                   <a className="button button-primary" href={project.demoUrl}>
-                    Open read-only demo <span aria-hidden="true">→</span>
+                    {project.demoLabel ?? "Open read-only demo"} <span aria-hidden="true">→</span>
                   </a>
                 )}
                 <a

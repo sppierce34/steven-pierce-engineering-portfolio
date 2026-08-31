@@ -3,12 +3,15 @@
 Public case study:
 `https://portfolio.meetregistrationpv.com/projects/meet-manager`
 
-Read-only recruiter demo:
-`https://portfolio.meetregistrationpv.com/demos/meet-manager`
+Live scoring recruiter demo (publish only after the application route is
+deployed and validated):
+`https://app.meetregistrationpv.com/recruiter-demo`
 
-The demo uses fictional meet, roster, and scoring records stored only in the
-portfolio. It does not authenticate with or submit data to the production meet
-platform.
+The demo uses the real Meet Manager flight scoring page and Convex scoring
+mutations against a dedicated fictional test meet. Every entry resets the
+shared flight, starts a short-lived non-admin demo session, and restricts the
+visitor to that exact scoring page and its scoring controls. It cannot browse
+organizer, registration, payment, campaign, health, or real-meet workflows.
 
 ## Public summary
 
@@ -52,3 +55,14 @@ organizer payment-status tracking, and refunds without storing card data.
 - Scoring interface and public results
 
 Use staged or redacted records. Do not publish athlete contact details.
+
+## Recruiter CTA
+
+- Label: `Open live scoring demo`
+- Target: `https://app.meetregistrationpv.com/recruiter-demo`
+- Fact: `Fresh fictional scoring flight`
+- The former portfolio-only read-only mock remains unlinked and is not the
+  recruiter CTA.
+- Publish this CTA only after the Meet Manager application PR is merged,
+  `RECRUITER_DEMO_ENABLED=1` is active on both origins, and the public route has
+  passed reset, scoring, isolation, and failover smoke checks.

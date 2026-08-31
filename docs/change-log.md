@@ -5,6 +5,46 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-08-30 - Prepare the real Meet Manager scoring demo CTA
+
+Scope:
+
+- Replaced the Meet Manager case-study demo target with the prepared
+  application route at `https://app.meetregistrationpv.com/recruiter-demo`.
+- Changed the action label to **Open live scoring demo**, added the **Fresh
+  fictional scoring flight** fact, and removed **Discuss the project**.
+- Updated tests and durable demo, project, hosting, and handoff documentation.
+
+Result:
+
+- Once published, recruiters will enter the maintained Meet Manager scoring
+  page rather than the portfolio-only mock. Each application entry resets a
+  fictional shared flight and constrains the session to its scoring workflow.
+
+Validation:
+
+- `npm test` passed the production build and all 11 rendered-page tests.
+- `npm run lint` completed with zero errors and three pre-existing `<img>`
+  optimization warnings.
+- GitHub Actions reached the existing dependency-audit gate and failed on the
+  already documented high-severity `image-size`/`vinext` and `nanoid`
+  advisories. The complete available fix still requires a separately validated
+  `vinext` beta upgrade; no new dependency was introduced by this change.
+- Application deployment and public browser acceptance remain required before
+  this CTA can be published safely.
+
+Publishing:
+
+- Not published. Hold this branch until the Meet Manager application PR is
+  merged, the route is enabled on both origins, and dual-origin/public smoke
+  checks pass.
+
+Follow-up:
+
+- Merge and deploy the application branch, validate reset/scoring/isolation,
+  then publish this portfolio branch through the existing Sites project and
+  update this entry with the version and public acceptance result.
+
 ## 2026-08-30 - Remove an unused accidental DNS record
 
 Scope:

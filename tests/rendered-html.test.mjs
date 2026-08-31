@@ -63,7 +63,7 @@ test("server-renders the engineering portfolio", async () => {
   );
   assert.match(
     html,
-    /https:\/\/portfolio\.meetregistrationpv\.com\/demos\/meet-manager/,
+    /https:\/\/app\.meetregistrationpv\.com\/recruiter-demo/,
   );
   assert.doesNotMatch(
     html,
@@ -198,6 +198,15 @@ test("server-renders the authenticated Meet Manager showcase", async () => {
   const html = await response.text();
   assert.match(html, /meet-manager-dashboard\.png/);
   assert.match(html, /Authenticated Pole Vault Meet Manager dashboard/);
+  assert.match(html, /Open live scoring demo/);
+  assert.match(html, /https:\/\/app\.meetregistrationpv\.com\/recruiter-demo/);
+  assert.match(html, /Fresh fictional scoring flight/);
+  assert.doesNotMatch(html, /Open read-only demo/);
+  assert.doesNotMatch(html, /Discuss the project/);
+  assert.doesNotMatch(
+    html,
+    /https:\/\/portfolio\.meetregistrationpv\.com\/demos\/meet-manager/,
+  );
   assert.doesNotMatch(html, /Meet Manager production login screen/);
 });
 
