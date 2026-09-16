@@ -59,6 +59,9 @@ Validation:
   including the Meet Manager action-row regression.
 - `npm run lint` completed with zero errors and the three pre-existing `<img>`
   optimization warnings.
+- GitHub Actions passed its build, rendered-page test, and lint phases, then
+  stopped at the already documented high-severity `image-size` and `nanoid`
+  audit advisories. This change does not modify dependencies.
 
 Publishing:
 
