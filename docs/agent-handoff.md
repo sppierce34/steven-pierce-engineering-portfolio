@@ -145,9 +145,12 @@ the `chatgpt.site` hostname. The Sites project identifier remains in
   It remains one page with seven preserved links. Both education dates use
   RGB (0.314, 0.357, 0.396); final PDF was rendered and visually inspected.
   No home address or private application information is included.
-- Publication of this September 15 correction is pending final site checks and
-  deployment. The public route and audience are unchanged. Update this line
-  after verifying the live PDF's bytes.
+- Published September 15 as Sites version 19 from source
+  `0919669986b1f0ddd935f99f63cc9e71b0cda5b1`; deployment succeeded. The existing
+  canonical PDF URL returns HTTP 200 / application/pdf and byte-matches this
+  asset (192,134 bytes). Both dates are now current on the public link.
+  The public audience, canonical routing and prior version 18 Meet Manager
+  action-row behavior are preserved. Production build and all 11 tests passed.
 
 - `public/assets/resume-document.pdf` is the current one-page public resume
   served at the canonical product-owned URL by the portfolio Worker.

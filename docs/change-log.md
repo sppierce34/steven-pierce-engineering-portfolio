@@ -27,10 +27,15 @@ Validation and publishing:
 - One page, seven links, current education text and matching colors checked;
   final full-page render visually inspected with no clipping or overlaps.
 - `npm test` passed the production build and all 11 rendered-page tests.
-- Deployment is pending; record the final live URL byte-match result here
-  before closing this task.
+- Re-ran `npm test` after preserving the existing version 18 source changes;
+  build and all 11 tests passed. Published exact source
+  `0919669986b1f0ddd935f99f63cc9e71b0cda5b1` as Sites version 19; deployment
+  succeeded. The canonical PDF returns HTTP 200 / application/pdf and its
+  192,134 downloaded bytes exactly match the approved asset and SHA256 above.
+- Verified the public Meet Manager case study still contains only its intended
+  scoring-demo action, without the removed production-root action.
 
-Follow-up: publish the validated asset and verify the existing public link.
+Follow-up: none for the resume. Existing browser PDF tabs may need refresh.
 
 ## 2026-08-31 - Simplify the Meet Manager case-study actions
 

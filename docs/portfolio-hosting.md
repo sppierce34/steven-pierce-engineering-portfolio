@@ -8,8 +8,11 @@ products without replacing or intercepting their customer-facing routes.
 
 September 15 resume-only update: the canonical PDF route remains unchanged.
 The approved one-page asset now records GT in progress since August 2026 and
-EMU graduation May 2010, with matching date colors. Pending deployment and
-live byte verification; no routing, domain, access or application change.
+EMU graduation May 2010, with matching date colors. Published as Sites version
+19; the canonical route returns HTTP 200 / application/pdf, and the downloaded
+192,134-byte PDF matches SHA256
+`46349bc60b6e3c4df7a762be25bad03dc4b788e233521cb916e6348e198f5fdb`.
+No routing, domain or access change. Existing version 18 behavior was retained.
 
 Verified on 2026-08-31:
 
