@@ -5,6 +5,30 @@ chronological order. Each entry should state scope, result, validation,
 publishing status, and remaining work. Never include credentials, DNS
 validation values, private data, or internal infrastructure addresses.
 
+## 2026-09-15 - Update the publicly hosted main resume
+
+Scope and result:
+
+- Replaced the public PDF with Steven's approved main resume, preserving its
+  one-page layout, project metrics, skills, employment and seven links.
+- Updated Georgia Tech from incoming/Beginning Fall 2026 to current/in progress,
+  `August 2026 - Present`; added Eastern Michigan graduation `May 2010`.
+- Matched both date colors to RGB (0.314, 0.357, 0.396). No home address,
+  private application information, internal labels or unsupported claims added.
+- The public URL and audience remain unchanged.
+
+Validation and publishing:
+
+- Exact approved PDF SHA256:
+  `46349bc60b6e3c4df7a762be25bad03dc4b788e233521cb916e6348e198f5fdb`.
+- One page, seven links, current education text and matching colors checked;
+  final full-page render visually inspected with no clipping or overlaps.
+- `npm test` passed the production build and all 11 rendered-page tests.
+- Deployment is pending; record the final live URL byte-match result here
+  before closing this task.
+
+Follow-up: publish the validated asset and verify the existing public link.
+
 ## 2026-08-31 - Publish the real Meet Manager scoring demo CTA
 
 Scope:

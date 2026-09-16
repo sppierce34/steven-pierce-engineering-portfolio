@@ -1,6 +1,6 @@
 # Current agent handoff
 
-Last verified: 2026-08-31
+Last verified: 2026-09-15 (resume update; older project checks retain their dates)
 
 This file is the shortest path to the repository's current operational state.
 Update it whenever live URLs, published content, hosting, validation status, or
@@ -132,6 +132,19 @@ the `chatgpt.site` hostname. The Sites project identifier remains in
 - `docs/portfolio-hosting.md` is the detailed hosting runbook.
 
 ## Resume state
+
+- September 15: Steven requested updating the publicly hosted resume with his
+  approved main version. GT is now current/in progress, `August 2026 - Present`;
+  Eastern Michigan graduation is `May 2010`, in the same muted gray as GT.
+  No project metrics, employment claims, skills or contact links changed.
+- Current asset SHA256:
+  `46349bc60b6e3c4df7a762be25bad03dc4b788e233521cb916e6348e198f5fdb`.
+  It remains one page with seven preserved links. Both education dates use
+  RGB (0.314, 0.357, 0.396); final PDF was rendered and visually inspected.
+  No home address or private application information is included.
+- Publication of this September 15 correction is pending final site checks and
+  deployment. The public route and audience are unchanged. Update this line
+  after verifying the live PDF's bytes.
 
 - `public/assets/resume-document.pdf` is the current one-page public resume
   served at the canonical product-owned URL by the portfolio Worker.
