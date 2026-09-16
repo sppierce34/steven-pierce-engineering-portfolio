@@ -50,12 +50,15 @@ the `chatgpt.site` hostname. The Sites project identifier remains in
 - The demo target remains organization `3`, meet `21`, and flight `210`, all
   fictional. `RECRUITER_DEMO_ENABLED=1` is active on both origins, and the
   existing IDs and `portfolio-demo` username are non-secret defaults.
-- The Meet Manager case study now presents **Open live scoring demo**, links the
-  application route, shows **Fresh fictional scoring flight**, and omits
-  **Discuss the project**.
+- The Meet Manager case study now presents only **Open live scoring demo**,
+  links the application route, shows **Fresh fictional scoring flight**, and
+  omits both **Open live application** and **Discuss the project**.
 - Portfolio version 17 published the CTA on August 31. Public browser acceptance
   followed it into `/meet/21/flights/210/score`, where the **Recruiter scoring
   sandbox** notice, fictional roster, and real Make/Miss/Pass controls rendered.
+- Portfolio version 18 removed the redundant production-root action. A fresh
+  public request returned HTTP 200 with **Open live scoring demo** present and
+  no **Open live application** label or production-root anchor.
 
 ### PV Video Capture recruiter demo
 

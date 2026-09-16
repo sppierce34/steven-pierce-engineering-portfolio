@@ -16,6 +16,9 @@ Scope and result:
 - Matched both date colors to RGB (0.314, 0.357, 0.396). No home address,
   private application information, internal labels or unsupported claims added.
 - The public URL and audience remain unchanged.
+- Preserved the already-live version 18 Meet Manager action-row change when
+  reconciling the publishing source with the GitHub copy; no unrelated live
+  behavior is rolled back. Both independent change-log entries are retained.
 
 Validation and publishing:
 
@@ -28,6 +31,40 @@ Validation and publishing:
   before closing this task.
 
 Follow-up: publish the validated asset and verify the existing public link.
+
+## 2026-08-31 - Simplify the Meet Manager case-study actions
+
+Scope:
+
+- Removed the redundant **Open live application** action from the Meet Manager
+  case study while preserving **Open live scoring demo** as its primary CTA.
+- Added rendered-page regression coverage and synchronized the Meet Manager
+  project note.
+
+Result:
+
+- Recruiters are directed to the safe fictional scoring flight instead of
+  being offered a second action to the production application root.
+- The main portfolio card's existing **Live app** link remains unchanged; this
+  adjustment is limited to the case-study action row.
+
+Validation:
+
+- `npm test` passed the production build and all 11 rendered-page tests,
+  including the Meet Manager action-row regression.
+- `npm run lint` completed with zero errors and the three pre-existing `<img>`
+  optimization warnings.
+
+Publishing:
+
+- Portfolio version 18 is live on the existing Sites project.
+- A fresh request to the product-owned Meet Manager case-study URL returned
+  HTTP 200 with **Open live scoring demo** present and no **Open live
+  application** label or production-root anchor.
+
+Follow-up:
+
+- None.
 
 ## 2026-08-31 - Publish the real Meet Manager scoring demo CTA
 
